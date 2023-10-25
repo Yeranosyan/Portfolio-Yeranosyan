@@ -70,7 +70,7 @@ export default function Intro() {
         I&apos;m a <span className="font-bold">software developer</span> with{" "}
         <span className="font-bold">1.5 years</span> of experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React.js(front-end)</span>.
+        <span className="underline">React(Next.js)</span>.
       </motion.h1>
 
       <motion.div
@@ -94,8 +94,8 @@ export default function Intro() {
         </Link>
 
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none border border-black/10 focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer  dark:bg-white/10"
-          href="/Yeranosyan.pdf"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none border border-black/10 focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer dark:bg-white/10"
+          href="/Gagik Yeranosyan - Front-End Developer.pdf"
           download
         >
           Download Resume{" "}

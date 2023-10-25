@@ -21,8 +21,8 @@ export default function About() {
       <p className="mb-3">
         After graduating with a degree in{" "}
         <span className="font-medium">Business Economic</span>, I decided to
-        pursue my passion for programming. I enrolled in a coding courses and
-        learned{" "}
+        pursue my passion for programming. I enrolled in a professional courses
+        and learned{" "}
         <span className="font-medium">
           front-end and back-end web development
         </span>

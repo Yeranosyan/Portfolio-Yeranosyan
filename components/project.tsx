@@ -38,7 +38,7 @@ export default function Project({
           <a
             href={projectUrl}
             target="_blank"
-            className="mt-2 bg-black/10 w-[2.4rem] px-3 py-1 tracking-wider text-sky-500 rounded-full cursor-pointer hover:bg-sky-300/50 transition-all dark:bg-white/20 dark:hover:bg-sky-300/40"
+            className="mt-2 bg-black/[0.7] w-[2.4rem] px-3 py-1 tracking-wider text-gray-200 rounded-full cursor-pointer hover:text-sky-300 transition-all dark:bg-white/10"
           >
             <AiOutlineLink />
           </a>
