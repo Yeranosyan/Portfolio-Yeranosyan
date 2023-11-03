@@ -75,6 +75,7 @@ export const experiencesData = [
     location: "Vancouver, BC",
     description:
       "I am a skilled React engineer with a strong background in front-end development. My expertise includes crafting dynamic front-end interfaces with React and JSX. In addition, I am proficient in Python and Django, enabling seamless integration between the front-end and back-end. My experience extends to testing API endpoints, implementing Redux for effective state management, and working with both functional and stateful components. My commitment to continuous learning ensures that I stay at the forefront of web development technologies.",
+    icon: React.createElement(SiIbm),
     date: "Oct 10, 2023",
   },
   {
