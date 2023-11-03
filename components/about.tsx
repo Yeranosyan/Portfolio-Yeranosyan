@@ -20,8 +20,8 @@ export default function About() {
       <SectionHeading> About me</SectionHeading>
       <p className="mb-3">
         After graduating with a degree in{" "}
-        <span className="font-medium">Business Economic</span>, I decided to
-        pursue my passion for programming. I enrolled in a professional courses
+        <span className="font-medium">Technical University</span>, I decided to
+        pursue my passion in programming. I enrolled in a professional courses
         and learned{" "}
         <span className="font-medium">
           front-end and back-end web development
@@ -31,10 +31,11 @@ export default function About() {
         feeling of finally figuring out a solution to a problem. My core stack
         is{" "}
         <span className="font-medium">
-          React.js, HTML, CSS, JS, Python, Django, MySQL
+          React.js, Next.js, JavaScript, CSS3, HTML5, Python, Django, MySQL
         </span>
-        . I am also familiar with TypeScript, Insomnia, Postman. I am always
-        looking to learn new technologies. I am currently looking for a{" "}
+        . I am also familiar with TypeScript, API&apos;s and tolls like
+        Insomnia, Postman. I am always looking to learn new technologies. I am
+        currently looking for a{" "}
         <span className="font-medium">full-time position</span> as a software
         developer.
       </p>
