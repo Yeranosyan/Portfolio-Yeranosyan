@@ -26,14 +26,19 @@ export default function About() {
         <span className="font-medium">
           front-end and back-end web development
         </span>
-        . <span className="italic">My favorite part of programming</span> is the
+        . I am a certified developer by{" "}
+        <span className="font-medium">
+          IBM, Meta and Johns Hopkins University
+        </span>
+        .<br></br>{" "}
+        <span className="italic">My favorite part of programming</span> is the
         problem-solving aspect. I <span className="underline">love</span> the
         feeling of finally figuring out a solution to a problem. My core stack
         is{" "}
         <span className="font-medium">
           React.js, Next.js, JavaScript, CSS3, HTML5, Python, Django, MySQL
         </span>
-        . I am also familiar with TypeScript, API&apos;s and tolls like
+        . I am also work with TypeScript, API&apos;s, ORM and tolls like
         Insomnia, Postman. I am always looking to learn new technologies. I am
         currently looking for a{" "}
         <span className="font-medium">full-time position</span> as a software
@@ -43,12 +48,12 @@ export default function About() {
       <p>
         <span className="italic">When I&apos;m not coding</span>, I enjoy
         playing tennis, develop my communication skill, read books about
-        economics and self-development. I also enjoy{" "}
+        economics, self-development and money. I also enjoy{" "}
         <span className="font-medium">
-          to work in a team and share and gain new experience{" "}
+          to work in a team, share and gain new experience{" "}
         </span>
-        I am currently learning new course{" "}
-        <span className="font-medium">IBM Full-Stack Software Developer</span>.
+        I am currently working on a{" "}
+        <span className="font-medium">Full-Stack Projects</span>.
       </p>
     </motion.section>
   );

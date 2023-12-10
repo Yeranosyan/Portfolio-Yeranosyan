@@ -5,7 +5,7 @@ import { SiIbm } from "react-icons/si";
 import { SiMeta } from "react-icons/si";
 import carsImg from "@/public/cars.png";
 import weatherImg from "@/public/weather.png";
-import miniImg from "@/public/mini.png";
+import taskImg from "@/public/task-manager.png";
 import dashboardImg from "@/public/dashboard.png";
 
 // as const TypeScript features for exactly execute array don't be random strings
@@ -80,9 +80,9 @@ export const experiencesData = [
   },
   {
     title: "IBM Full-Stack Software Developer Professional Certificate",
-    location: "Vancouver, BC",
+    location: "Nov 30, 2023",
     description:
-      "Program course:  learn how to build, deploy, test, run, and manage full stack cloud native applications. Technologies covered includes Cloud foundations, GitHub, Node.js, React, CI/CD, Containers, Docker, Kubernetes, OpenShift, Databases, NoSQL, Django ORM, Bootstrap, Application Security, Microservices, Serverless computing.",
+      "Through this course, I'm advancing as a mid-level full-stack developer. I'm hands-on with Cloud, GitHub, Node.js, React, CI/CD, Docker, Kubernetes, Databases, NoSQL, Django ORM, Bootstrap, Security, Microservices, and Serverless Computing.",
     icon: React.createElement(SiIbm),
     date: "2023-present",
   },
@@ -90,10 +90,18 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Task Manager App",
+    projectUrl: "https://app-tasks-manager.vercel.app/",
+    description:
+      "Full Stack App. Great account (sign-up) then (sing-in) or simply Continue whit Google through (sign-up).",
+    tags: ["React", "Styled Components", "Next.js", "Prisma", "MongoDB"],
+    imageUrl: taskImg,
+  },
+  {
     title: "User Dashboard",
     projectUrl: "https://yeranosyan-dashboard.vercel.app/",
     description:
-      "User Dashboard with side bar, implement useEffect Hook, to tell component what needs to do after render. useState Hook, to add state to my component.",
+      "Build a User Dashboard with a sidebar using useEffect to manage post-render actions and useState to handle component state.",
     tags: ["Next.js", "React", "Chart.js", "Tailwind CSS"],
     imageUrl: dashboardImg,
   },
@@ -101,7 +109,7 @@ export const projectsData = [
     title: "Weather App",
     projectUrl: "https://github.com/Yeranosyan/Frontend-Weather-App",
     description:
-      " Using OpenWeather, I create API key and get current data. Then I use Postman API platform for building and using API's.",
+      "Generate an API key with OpenWeather to fetch current data. Employ the Postman API platform for API creation and utilization.",
     tags: ["HTML", "CSS", "JS", "Postman", "OpenWeather", "API"],
     imageUrl: weatherImg,
   },
@@ -112,14 +120,6 @@ export const projectsData = [
       "Modern design, using category filters, adding animation, working with libraries, responsive design included for the mobile version.",
     tags: ["HTML", "CSS", "JS", "Swiper", "ScrollReveal", "MixItUp"],
     imageUrl: carsImg,
-  },
-  {
-    title: "Portfolio Mini",
-    projectUrl: "https://yeranosyan-portfolio-mini.vercel.app/",
-    description:
-      "Light-Dark Mode semantic HTML, implementation of animation libraries.",
-    tags: ["HTML", "CSS", "JavaScript", "ScrollReveal", "RemixIcon"],
-    imageUrl: miniImg,
   },
 ] as const;
 
@@ -133,11 +133,14 @@ export const skillsData = [
   "Git",
   "GitHub",
   "MySQL",
+  "Prisma",
+  "MongoDB",
   "Python",
   "Django",
   "API's",
   "Postman",
   "Insomnia",
+  "Clerk",
   "React Email",
   "Resend",
   "CI/CD",
@@ -148,4 +151,5 @@ export const skillsData = [
   "Tailwind CSS",
   "Bootstrap",
   "Framer Motion",
+  "Styled Components",
 ] as const;
