@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Gagik | Personal Portfolio",
-  description: "Gagik front-end developer with 2 years of experience",
+  description: "Gagik software developer with 2 years of experience",
   author: "Gagik Yeranosyan",
 };
 

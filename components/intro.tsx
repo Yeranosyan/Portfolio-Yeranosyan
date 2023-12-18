@@ -70,7 +70,7 @@ export default function Intro() {
         I&apos;m a <span className="font-bold">software developer</span> with{" "}
         <span className="font-bold">2 years</span> of experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">Front-End Development</span>.
+        <span className="underline">Full-Stack Development</span>.
       </motion.h1>
 
       <motion.div

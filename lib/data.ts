@@ -80,11 +80,11 @@ export const experiencesData = [
   },
   {
     title: "IBM Full-Stack Software Developer Professional Certificate",
-    location: "Nov 30, 2023",
+    location: "Vancouver",
     description:
       "Through this course, I'm advancing as a mid-level full-stack developer. I'm hands-on with Cloud, GitHub, Node.js, React, CI/CD, Docker, Kubernetes, Databases, NoSQL, Django ORM, Bootstrap, Security, Microservices, and Serverless Computing.",
     icon: React.createElement(SiIbm),
-    date: "2023-present",
+    date: "Nov 30, 2023t",
   },
 ] as const;
 
