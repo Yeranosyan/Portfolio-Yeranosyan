@@ -28,7 +28,7 @@ export default function About() {
         </span>
         . I am a certified developer by{" "}
         <span className="font-medium">
-          IBM, Meta and Johns Hopkins University
+          IBM, META and Johns Hopkins University
         </span>
         .<br></br>{" "}
         <span className="italic">My favorite part of programming</span> is the
