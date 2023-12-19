@@ -7,6 +7,7 @@ import carsImg from "@/public/cars.png";
 import weatherImg from "@/public/weather.png";
 import taskImg from "@/public/task-manager.png";
 import dashboardImg from "@/public/dashboard.png";
+import bilsteinImg from "@/public/bilstein.png";
 
 // as const TypeScript features for exactly execute array don't be random strings
 
@@ -98,12 +99,12 @@ export const projectsData = [
     imageUrl: taskImg,
   },
   {
-    title: "User Dashboard",
-    projectUrl: "https://yeranosyan-dashboard.vercel.app/",
+    title: "E-Commerce Bilstein",
+    projectUrl: "https://app-e-commerce.payloadcms.app/",
     description:
-      "Build a User Dashboard with a sidebar using useEffect to manage post-render actions and useState to handle component state.",
-    tags: ["Next.js", "React", "Chart.js", "Tailwind CSS"],
-    imageUrl: dashboardImg,
+      "Full Stack E-Commerce App with an Admin Dashboard & CMS login: test@gmail.com | password: user. ",
+    tags: ["Payload", "CMS", "SCSS", "React", "Next.js", "MongoDB"],
+    imageUrl: bilsteinImg,
   },
   {
     title: "Weather App",
@@ -112,6 +113,14 @@ export const projectsData = [
       "Generate an API key with OpenWeather to fetch current data. Employ the Postman API platform for API creation and utilization.",
     tags: ["HTML", "CSS", "JS", "Postman", "OpenWeather", "API"],
     imageUrl: weatherImg,
+  },
+  {
+    title: "User Dashboard",
+    projectUrl: "https://yeranosyan-dashboard.vercel.app/",
+    description:
+      "Build a User Dashboard with a sidebar using useEffect to manage post-render actions and useState to handle component state.",
+    tags: ["Next.js", "React", "Chart.js", "Tailwind CSS"],
+    imageUrl: dashboardImg,
   },
   {
     title: "Car Trade",
