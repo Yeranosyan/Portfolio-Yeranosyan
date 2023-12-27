@@ -160,6 +160,7 @@ export const skillsData = [
   "Netlify",
   "Cloud Computing",
   "Tailwind CSS",
+  "Material UI",
   "Bootstrap",
   "Framer Motion",
   "Styled Components",
