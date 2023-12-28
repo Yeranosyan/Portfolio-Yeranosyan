@@ -102,8 +102,8 @@ export const projectsData = [
     title: "E-Commerce Bilstein",
     projectUrl: "https://app-e-commerce.payloadcms.app/",
     description:
-      "Full Stack E-Commerce App with an Admin Dashboard & CMS login: test@gmail.com | password: user. ",
-    tags: ["Payload", "CMS", "SCSS", "React", "Next.js", "MongoDB"],
+      "Full Stack E-Commerce App with an Admin Dashboard & CMS login: test@gmail.com , password: user. ",
+    tags: ["Payload", "STRIPE", "SCSS", "React", "Next.js", "MongoDB"],
     imageUrl: bilsteinImg,
   },
   {
@@ -126,7 +126,7 @@ export const projectsData = [
     title: "Car Trade",
     projectUrl: "https://yeranosyan-car-trade.vercel.app/",
     description:
-      "Modern design, using category filters, adding animation, working with libraries, responsive design included for the mobile version.",
+      "Crafting a contemporary design with intuitive category filters, incorporating seamless animations, leveraging powerful libraries and fully responsive.",
     tags: ["HTML", "CSS", "JS", "Swiper", "ScrollReveal", "MixItUp"],
     imageUrl: carsImg,
   },
