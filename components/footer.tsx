@@ -8,7 +8,7 @@ export default function Footer() {
       </small>
       <span className="font-semibold">About this website:</span> build whit
       React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS,
-      Framer Emotion, React Email & Resend, Vercel hosting.
+      Framer Emotion, React Email & Resend, GoDaddy hosting.
     </footer>
   );
 }
