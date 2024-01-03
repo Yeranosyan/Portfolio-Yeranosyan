@@ -19,30 +19,26 @@ export default function About() {
     >
       <SectionHeading> About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Technical University</span>, I decided to
-        pursue my passion in programming. I enrolled in a professional courses
-        and learned{" "}
-        <span className="font-medium">
-          front-end and back-end web development
-        </span>
-        . I am a certified developer by{" "}
-        <span className="font-medium">
-          IBM, META and Johns Hopkins University
-        </span>
-        .<br></br>{" "}
+        Graduating with a degree in{" "}
+        <span className="font-medium">Technical University</span>, I started
+        working on programming. I enrolled in a professional courses and learned{" "}
+        <span className="font-medium">front-end</span> and{" "}
+        <span className="font-medium">back-end</span> web development. I am a
+        certified developer by <span className="font-medium">IBM, META</span>{" "}
+        and <span className="font-medium">Johns Hopkins University</span>.
+        <br></br>{" "}
         <span className="italic">My favorite part of programming</span> is the
         problem-solving aspect. I <span className="underline">love</span> the
         feeling of finally figuring out a solution to a problem. My core stack
         is{" "}
         <span className="font-medium">
-          React.js, Next.js, JavaScript, CSS3, HTML5, Python, Django, MySQL
+          React, Next.js, TypeScript, JavaScript, CSS3, HTML5, Python, Django,
+          MySQL
         </span>
-        . I am also work with TypeScript, API&apos;s, ORM and tolls like
-        Insomnia, Postman. I am always looking to learn new technologies. I am
-        currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        . I am also work with API&apos;s, ORM and tolls like Insomnia, Postman.
+        I am always looking to learn new technologies. I am currently looking
+        for a <span className="font-medium">full-time position</span> as a
+        software developer.
       </p>
 
       <p>
