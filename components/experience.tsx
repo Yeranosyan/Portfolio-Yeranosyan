@@ -12,7 +12,7 @@ import { experiencesData } from "@/lib/data";
 import { useTheme } from "@/context/theme-context";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience", 0.5);
+  const { ref } = useSectionInView("Experience", 0.2);
   const { theme } = useTheme();
 
   return (
