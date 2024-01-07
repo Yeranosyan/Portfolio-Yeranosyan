@@ -62,13 +62,13 @@ export default function Intro() {
         </div>
       </div>
       <motion.h1
-        className="mb-20 mt-10 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl"
+        className="mb-20 mt-10 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Gagik Yeranosyan.</span>{" "}
-        I&apos;m a <span className="font-bold">software developer</span> with{" "}
-        <span className="font-bold">2 years</span> of experience.
+        <span className="font-bold">Hello, I&apos;m Gagik Yeranosyan, </span>{" "}
+        software developer with <span className="font-bold">2 years</span> of
+        experience.
         <br /> I build <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline"> Full-Stack Development.</span>
       </motion.h1>
