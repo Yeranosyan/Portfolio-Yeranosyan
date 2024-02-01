@@ -3,17 +3,17 @@
 import Image from "next/image";
 import React from "react";
 import introImg from "@/public/intro.png";
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { motion } from "framer-motion";
+import { BsArrowRight } from "react-icons/bs";
+import { RiLinkedinFill } from "react-icons/ri";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
-import { SiCoursera } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
+import { SiCredly } from "react-icons/si";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
-  // for useSectionInView function
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
@@ -66,11 +66,14 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Gagik Yeranosyan, </span>{" "}
-        software developer with <span className="font-bold">2 years</span> of
-        experience.
-        <br /> I build <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline"> Full-Stack Development.</span>
+        <span className="font-bold">Hello, I&apos;m Gagik Yeranosyan, </span>
+        <span>certified software developer. </span>I build{" "}
+        <span className="italic">sites</span>
+        <span> &</span> <span className="italic">apps</span>.<br />
+        <span>
+          My focus is <span className="underline"> Full-Stack </span>{" "}
+          Development.
+        </span>
       </motion.h1>
 
       <motion.div
@@ -103,26 +106,26 @@ export default function Intro() {
         </a>
 
         <a
-          className="px-7 p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/60 "
+          className="px-7 p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
           href="https://www.linkedin.com/in/gagik-yeranosyan/"
           target="_blank"
         >
-          <BsLinkedin />
+          <RiLinkedinFill />
         </a>
 
         <a
-          className="px-7 p-4 text-gray-700 flex items-center gap-2 text-[1.50rem] rounded-full focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/60"
+          className="px-7 p-4 text-gray-700 flex items-center gap-2 text-[1.50rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
           href="https://github.com/Yeranosyan"
           target="_blank"
         >
-          <FaGithubSquare />
+          <FaGithub />
         </a>
         <a
-          className="px-7 p-4 text-gray-700 flex items-center gap-2  text-[1.50rem] rounded-full focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/60"
-          href="https://www.coursera.org/user/619c69917e10d08ac954449e621eb67a"
+          className="px-7 p-4 text-gray-700 flex items-center gap-2 text-[2.30rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
+          href="https://www.credly.com/users/gagik-yeranosyan"
           target="_blank"
         >
-          <SiCoursera />
+          <SiCredly />
         </a>
       </motion.div>
     </section>
