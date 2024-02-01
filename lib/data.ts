@@ -105,7 +105,7 @@ export const projectsData = [
   },
   {
     title: "E-Commerce Bilstein",
-    projectUrl: "https://app-e-commerce.payloadcms.app/",
+    projectUrl: "https://github.com/Yeranosyan/E-Commerce-App",
     description:
       "Full Stack E-Commerce App with an Admin Dashboard & CMS login: test@gmail.com , password: user. ",
     tags: ["Payload", "STRIPE", "SCSS", "React", "Next.js", "MongoDB"],
