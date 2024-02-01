@@ -62,17 +62,24 @@ export default function Intro() {
         </div>
       </div>
       <motion.h1
-        className="mb-10 mt-10 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-10 px-4 text-base font-medium !leading-[1.5] sm:text-3xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I&apos;m Gagik Yeranosyan, </span>
-        <span>certified software developer. </span>I build{" "}
-        <span className="italic">sites</span>
+        <span>
+          certified <br />
+          software developer.{" "}
+        </span>
+        I build <span className="italic">sites</span>
         <span> &</span> <span className="italic">apps</span>.<br />
         <span>
-          My focus is <span className="underline"> Full-Stack </span>{" "}
-          Development.
+          My focus is <span className="underline"> full-stack </span>{" "}
+          development.
+        </span>
+        <br />
+        <span className="text-sm italic text-gray-500 dark:text-pink-200">
+          cost efficient and result oriented
         </span>
       </motion.h1>
 
