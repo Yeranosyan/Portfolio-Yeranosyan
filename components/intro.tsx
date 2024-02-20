@@ -71,7 +71,7 @@ export default function Intro() {
           certified <br />
           software developer.{" "}
         </span>
-        I build <span className="italic">sites</span>
+        I build <span className="italic">websites</span>
         <span> &</span> <span className="italic">apps</span>.<br />
         <span>
           My focus is <span className="underline"> full-stack </span>{" "}
@@ -79,7 +79,7 @@ export default function Intro() {
         </span>
         <br />
         <span className="text-sm italic text-gray-500 dark:text-lime-200">
-          cost efficient and result oriented
+          customer-centric, cost efficient and result oriented
         </span>
       </motion.h1>
 

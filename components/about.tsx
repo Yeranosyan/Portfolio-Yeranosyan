@@ -20,9 +20,8 @@ export default function About() {
       <SectionHeading> About me</SectionHeading>
       <p className="mb-3">
         Graduating with a degree in{" "}
-        <span className="font-medium">Technical University</span>, I started
-        working on programming. I enrolled in a professional courses and learned{" "}
-        <span className="font-medium">front-end</span> and{" "}
+        <span className="font-medium">Technical University</span>. I working in
+        both sides <span className="font-medium">front-end</span> and{" "}
         <span className="font-medium">back-end</span> web development. I am a
         certified developer by <span className="font-medium">IBM, META</span>{" "}
         and <span className="font-medium">Johns Hopkins University</span>.
@@ -49,7 +48,7 @@ export default function About() {
           working in a team, sharing and gaining new experience{" "}
         </span>
         I am currently working on a{" "}
-        <span className="font-medium">full-stack projects</span>.
+        <span className="font-medium">Microsoft Certifications</span>.
       </p>
     </motion.section>
   );
