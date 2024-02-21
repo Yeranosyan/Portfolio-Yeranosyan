@@ -25,19 +25,19 @@ export default function About() {
         <span className="font-medium">back-end</span> web development. I am a
         certified developer by <span className="font-medium">IBM, META</span>{" "}
         and <span className="font-medium">Johns Hopkins University</span>.
-        <br></br>{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
+        <br></br> <span className="italic">My core part of programming</span> is
+        the problem-solving aspect. I <span className="underline">love</span>{" "}
+        the feeling of finally figuring out a solution to a problem. My core
+        stack is{" "}
         <span className="font-medium">
-          React, Next.js, TypeScript, JavaScript, CSS3, HTML5, Python, Django,
-          MySQL
+          React, Next.js, TypeScript, JavaScript, C#, .NET, Python, Django,
+          MySQL, CSS3, HTML5
         </span>
         . I am also work with API&apos;s, ORM and tolls like Insomnia, Postman.
-        I am always looking to learn new technologies. I am currently looking
-        for a <span className="font-medium">full-time position</span> as a
-        software developer.
+        I am always here as a management solution to help you set business
+        goals, currently looking for a{" "}
+        <span className="font-medium">full-time position</span> as a software
+        developer.
       </p>
 
       <p>

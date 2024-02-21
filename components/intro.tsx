@@ -78,7 +78,7 @@ export default function Intro() {
           development.
         </span>
         <br />
-        <span className="text-sm italic text-gray-500 dark:text-lime-200">
+        <span className="text-sm  text-gray-500 dark:text-gray-400">
           customer-centric, cost efficient and result oriented
         </span>
       </motion.h1>

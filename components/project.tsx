@@ -15,7 +15,7 @@ export default function Project({
   imageUrl,
   projectUrl,
 }: ProjectProps) {
-  //animation  for project section
+  // Animation  for project section
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -38,7 +38,7 @@ export default function Project({
           <a
             href={projectUrl}
             target="_blank"
-            className="mt-2 bg-black/[0.7] w-[2.4rem] px-3 py-1 tracking-wider text-gray-200 rounded-full cursor-pointer hover:text-lime-200 transition-all dark:bg-white/10 dark:hover:text-lime-300"
+            className="mt-2 bg-black/[0.7] w-[2.4rem] px-3 py-1 tracking-wider text-gray-200 rounded-full cursor-pointer hover:text-gray-400 transition-all dark:bg-white/10 dark:hover:text-gray-400"
           >
             <AiOutlineLink />
           </a>
@@ -48,7 +48,7 @@ export default function Project({
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:bg-gray-800 dark:text-white/80"
+                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:bg-white/10 dark:text-white/80"
                 key={index}
               >
                 {tag}
