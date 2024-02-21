@@ -25,7 +25,7 @@ export default function Intro() {
     >
       <div className="flex items-center justify-center">
         <div className="relative">
-          {/* animate intro portrait */}
+          {/* Animate intro portrait */}
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -44,13 +44,13 @@ export default function Intro() {
               className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl dark:border-white/20"
             />
           </motion.div>
-          {/*  animate my emoji and style like simply text file */}
+          {/*  Animate my emoji and style like simply text file */}
           <motion.span
             className="absolute bottom-0 right-0 text-2xl"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              // bounce effect
+              // Bounce effect
               type: "spring",
               stiffness: 125,
               delay: 0.1,

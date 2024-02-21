@@ -141,7 +141,7 @@ export const skillsData = [
   "Next.js",
   "JavaScript",
   "C#",
-  ".NET",
+  "ASP.NET Core Web API",
   "Python",
   "Django",
   "HTML5",
@@ -171,4 +171,7 @@ export const skillsData = [
   "Styled Components",
   "Visual Studio Code",
   "Visual Studio",
+  "Agile",
+  "Scrum",
+  "Kanban",
 ] as const;
