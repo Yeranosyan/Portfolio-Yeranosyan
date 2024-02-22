@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import introImg from "@/public/intro.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -16,6 +16,7 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const [open, setOpen] = useState(false);
 
   return (
     <section
@@ -34,31 +35,31 @@ export default function Intro() {
               duration: 0.2,
             }}
           >
-            <Image
-              src={introImg}
-              alt="Gagik portrait"
-              width="192"
-              height="192"
-              quality="95"
-              priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl dark:border-white/20"
-            />
+            <div className="relative">
+              <Image
+                src={introImg}
+                alt="Gagik portrait"
+                width="192"
+                height="192"
+                quality="95"
+                priority={true}
+                className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl dark:border-white/20"
+              />
+              <div className="absolute bottom-3 right-2">
+                <div
+                  onClick={() => setOpen(!open)}
+                  className="bg-blue-400 dark:bg-lime-400 w-3 h-3 cursor-pointer rounded-full animate-pulse"
+                />
+                {open && (
+                  <div className="border border-blue-400 dark:border-lime-400 items-center justify-center flex top-[-.1rem] right-[-5.4rem] rounded-2xl w-fit px-2 absolute whitespace-nowrap">
+                    <p className="text-[10px] text-blue-300 dark:text-lime-300">
+                      open to work
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
           </motion.div>
-          {/*  Animate my emoji and style like simply text file */}
-          <motion.span
-            className="absolute bottom-0 right-0 text-2xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              // Bounce effect
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            🖐🏼
-          </motion.span>
         </div>
       </div>
       <motion.h1
@@ -82,7 +83,6 @@ export default function Intro() {
           customer-centric, cost efficient and result oriented
         </span>
       </motion.h1>
-
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4"
         initial={{ opacity: 0, y: 100 }}
