@@ -10,6 +10,7 @@ import { RiLinkedinFill } from "react-icons/ri";
 import { HiDownload } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import { SiCredly } from "react-icons/si";
+import { FaYoutube } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -62,6 +63,7 @@ export default function Intro() {
           </motion.div>
         </div>
       </div>
+
       <motion.h1
         className="mb-10 mt-10 px-4 text-base font-medium !leading-[1.5] sm:text-3xl"
         initial={{ opacity: 0, y: 100 }}
@@ -70,7 +72,7 @@ export default function Intro() {
         <span className="font-bold">Hello, I&apos;m Gagik Yeranosyan, </span>
         <span>
           certified <br />
-          software developer.{" "}
+          software engineer.{" "}
         </span>
         I build <span className="italic">websites</span>
         <span> &</span> <span className="italic">apps</span>.<br />
@@ -93,7 +95,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-white px-5 py-2 flex items-center gap-2 rounded-full outline-none border border-black/10 hover:scale-110 active:scale-105 transition cursor-pointer dark:bg-white/10"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -104,36 +106,58 @@ export default function Intro() {
         </Link>
 
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none border border-black/10 focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer dark:bg-white/10"
-          href="/Gagik-Yeranosyan_Software-Developer.pdf"
+          className="group bg-white px-5 py-2 flex items-center gap-2 rounded-full outline-none border border-black/10 hover:scale-110 active:scale-105 transition cursor-pointer dark:bg-white/10"
+          href="/Gagik-Yeranosyan_Software-Engineer.pdf"
           download
         >
           Download Resume{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition group-hover:text-lime-600 dark:group-hover:text-lime-300 dark:group-opacity-30" />
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition group-hover:text-blue-400 dark:group-hover:text-blue-300 dark:group-opacity-30" />
         </a>
-
-        <a
-          className="px-7 p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
-          href="https://www.linkedin.com/in/gagik-yeranosyan/"
-          target="_blank"
-        >
-          <RiLinkedinFill />
-        </a>
-
-        <a
-          className="px-7 p-4 text-gray-700 flex items-center gap-2 text-[1.50rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
-          href="https://github.com/Yeranosyan"
-          target="_blank"
-        >
-          <FaGithub />
-        </a>
-        <a
-          className="px-7 p-4 text-gray-700 flex items-center gap-2 text-[2.30rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
-          href="https://www.credly.com/users/gagik-yeranosyan"
-          target="_blank"
-        >
-          <SiCredly />
-        </a>
+      </motion.div>
+      <motion.div
+        className="flex flex-wrap justify-center items-center gap-2 px-4"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}
+      >
+        <div className="flex items-center">
+          <a
+            className="p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] sm:text-[1.2rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
+            href="https://www.linkedin.com/in/gagik-yeranosyan/"
+            target="_blank"
+          >
+            <RiLinkedinFill />
+          </a>
+        </div>
+        <div className="flex items-center">
+          <a
+            className="p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] sm:text-[1.2rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
+            href="https://www.youtube.com/@gagikyeranosyan"
+            target="_blank"
+          >
+            <FaYoutube />
+          </a>
+        </div>
+        <div className="flex items-center">
+          <a
+            className="p-4 text-gray-700 flex items-center gap-2 text-[1.50rem] sm:text-[1.35rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
+            href="https://github.com/Yeranosyan"
+            target="_blank"
+          >
+            <FaGithub />
+          </a>
+        </div>
+        <div className="flex items-center">
+          <a
+            className="p-4 text-gray-700 flex items-center gap-2 text-[2.30rem] sm:text-[1.75rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
+            href="https://www.credly.com/users/gagik-yeranosyan"
+            target="_blank"
+          >
+            <SiCredly />
+          </a>
+        </div>
       </motion.div>
     </section>
   );
