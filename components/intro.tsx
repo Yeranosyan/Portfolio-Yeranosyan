@@ -150,7 +150,7 @@ export default function Intro() {
 
           <a
             className="p-4 text-gray-700 flex items-center gap-2 text-[1.80rem] sm:text-[1.45rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
-            href="https://learn.microsoft.com/en-us/users/gagikyeranosyan-8721/transcript/v0rp9h1je1mnwo5"
+            href="https://learn.microsoft.com/en-us/users/gagikyeranosyan/transcript/v0rp9h1je1mnwo5"
             target="_blank"
           >
             <RiMicrosoftFill />
