@@ -53,7 +53,7 @@ export default function Intro() {
                   className="bg-blue-400 dark:bg-lime-400 w-3 h-3 cursor-pointer rounded-full animate-pulse"
                 />
                 {open && (
-                  <div className="border border-blue-400 dark:border-lime-400 items-center justify-center flex top-[-.1rem] right-[-5.4rem] rounded-2xl w-fit px-2 absolute whitespace-nowrap">
+                  <div className="border border-blue-300 dark:border-lime-300 items-center justify-center flex top-[-.1rem] right-[-5.4rem] rounded-2xl w-fit px-2 absolute whitespace-nowrap">
                     <p className="text-[10px] text-blue-300 dark:text-lime-300">
                       open to work
                     </p>
