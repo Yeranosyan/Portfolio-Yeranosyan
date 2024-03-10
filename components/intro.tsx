@@ -9,6 +9,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { RiLinkedinFill } from "react-icons/ri";
 import { HiDownload } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
+import { RiMicrosoftFill } from "react-icons/ri";
 import { SiCredly } from "react-icons/si";
 import { FaYoutube } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
@@ -130,17 +131,15 @@ export default function Intro() {
           >
             <RiLinkedinFill />
           </a>
-        </div>
-        <div className="flex items-center">
+
           <a
-            className="p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] sm:text-[1.2rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
+            className="p-4 text-gray-700 flex items-center gap-2 text-[1.55rem] sm:text-[1.3rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
             href="https://www.youtube.com/@gagikyeranosyan"
             target="_blank"
           >
             <FaYoutube />
           </a>
-        </div>
-        <div className="flex items-center">
+
           <a
             className="p-4 text-gray-700 flex items-center gap-2 text-[1.50rem] sm:text-[1.35rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
             href="https://github.com/Yeranosyan"
@@ -148,8 +147,15 @@ export default function Intro() {
           >
             <FaGithub />
           </a>
-        </div>
-        <div className="flex items-center">
+
+          <a
+            className="p-4 text-gray-700 flex items-center gap-2 text-[1.80rem] sm:text-[1.45rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
+            href="https://learn.microsoft.com/en-us/users/gagikyeranosyan-8721/transcript/v0rp9h1je1mnwo5"
+            target="_blank"
+          >
+            <RiMicrosoftFill />
+          </a>
+
           <a
             className="p-4 text-gray-700 flex items-center gap-2 text-[2.30rem] sm:text-[1.75rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
             href="https://www.credly.com/users/gagik-yeranosyan"
