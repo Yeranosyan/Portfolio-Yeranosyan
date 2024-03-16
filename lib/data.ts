@@ -1,8 +1,3 @@
-import React from "react";
-import { LuGraduationCap } from "react-icons/lu";
-import { SiCoursera } from "react-icons/si";
-import { SiIbm } from "react-icons/si";
-import { SiMeta } from "react-icons/si";
 import carsImg from "@/public/cars.png";
 import weatherImg from "@/public/weather.png";
 import taskImg from "@/public/task-manager.png";
@@ -10,7 +5,6 @@ import dashboardImg from "@/public/dashboard.png";
 import bilsteinImg from "@/public/bilstein.png";
 
 // as const TypeScript features for exactly execute array don't be random strings
-
 export const links = [
   {
     name: "Home",
@@ -40,11 +34,19 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Microsoft C#, ASP.NET Web APIs Professional Certificate",
+    location: "Vancouver, BC",
+    description:
+      "I specialize in C# programming and .NET technology, proficient in creating and managing Console Apps using Visual Studio. Working on developing console mini-games. Skilled in ASP.NET Web APIs. Proficient in data type manipulation, string formatting, and array manipulation. Exceptionally skilled in debugging C# console apps in Visual Studio Code and implementing exception handling. Check out my GitHub for more details.",
+    icon: "/microsoft.png",
+    date: "Mar 12, 2024",
+  },
+  {
     title: "IBM Full-Stack Software Developer Professional Certificate",
     location: "Vancouver, BC",
     description:
       "I specialize in developing full-stack applications with a primary emphasis on RESTful API design for secure data exchange, leveraging technologies such as Python Flask and Django. My expertise lies in utilizing Object-Relational Mapping (ORM) to seamlessly interact with data across diverse relational databases, following the Model-View-Template (MVT) architecture pattern. Additionally, I employ Docker to streamline the development, testing, and deployment processes, ensuring efficient delivery of applications on platforms like the IBM Cloud.",
-    icon: React.createElement(SiIbm),
+    icon: "/ibm.png",
     date: "Nov 30, 2023",
   },
 
@@ -53,7 +55,7 @@ export const experiencesData = [
     location: "Vancouver, BC",
     description:
       "Developed full-stack applications, including React.js in the front-end, and created servers using Python, Django, Node.js, and Express technologies. Maintained and modified existing applications by creating and using multiple components. Utilized new technologies and innovations to improve functionality. Demonstrated a solid understanding of creating performant and scalable data-intensive user experiences, with an obsession for design aesthetics and engineering prowess.",
-    icon: React.createElement(SiMeta),
+    icon: "/meta.png",
     date: "Oct 10, 2023",
   },
 
@@ -62,7 +64,7 @@ export const experiencesData = [
     location: "Vancouver, BC",
     description:
       "As a Back-End Developer, I specialize in utilizing Python for comprehensive back-end development. I have honed my skills in MySQL for efficient database management, encompassing the management of table relationships, Primary Keys (PK), and Foreign Keys (FK). Leveraging Django, I have crafted web applications, showcasing proficiency in designing and implementing RESTful APIs, and thorough testing methodologies using tools like Postman and Insomnia. I have acquired expertise in serializers, deserializers, data modeling, and implementing effective version control strategies.",
-    icon: React.createElement(SiMeta),
+    icon: "/meta.png",
     date: "Sep 12, 2023",
   },
 
@@ -71,7 +73,7 @@ export const experiencesData = [
     location: "Vancouver, BC",
     description:
       "Working on the Front-End, I have attained proficiency in React, mastering its key hooks such as useState, useEffect, useContext, and useReducer, along with proficiency in the Context API. I create dynamic components for code efficiency and utilize npm to add additional libraries. Proficient in Tailwind, Framer Emotion, Styled Components, and Tremor to craft professional UIs, I excel at creating clean and efficient UIs quickly.",
-    icon: React.createElement(SiMeta),
+    icon: "/meta.png",
     date: "Jul 31, 2023",
   },
 
@@ -80,7 +82,7 @@ export const experiencesData = [
     location: "Vancouver, BC",
     description:
       "I specialize in developing dynamic projects, adeptly utilizing technologies such as HTML, CSS, SASS, and JavaScript. With a strong grasp of the Document Object Model (DOM) as a logical tree, I excel in crafting responsive designs and creating custom styles. My extensive understanding and proficiency in CSS further enhance my ability to deliver high-quality solutions.",
-    icon: React.createElement(SiCoursera),
+    icon: "/jhu.png",
     date: "Aug 6, 2022",
   },
 
@@ -89,7 +91,7 @@ export const experiencesData = [
     location: "Ukraine",
     description:
       "Diploma | Business Economics (WES). My academic background includes a comprehensive study of computer fundamentals, mathematical modeling, data analysis, and security protocols. Moreover, I have delved deeply into economic cycles, enabling me to adeptly navigate business operations, forge strategic partnerships, and demonstrate proficiency in entrepreneurship fundamentals. Additionally, my studies have equipped me with a solid understanding of civil and commercial law, logistics, and sales management.",
-    icon: React.createElement(LuGraduationCap),
+    icon: "/wes.png",
     date: "2013-2016",
   },
 ] as const;

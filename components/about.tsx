@@ -23,17 +23,18 @@ export default function About() {
         <span className="font-medium">Technical University</span>. I working in
         both sides <span className="font-medium">front-end</span> and{" "}
         <span className="font-medium">back-end</span> web development. I am a
-        certified developer by <span className="font-medium">IBM, META</span>{" "}
-        and <span className="font-medium">Johns Hopkins University</span>.
-        <br></br> <span className="italic">My core part of programming</span> is
-        the problem-solving aspect. I <span className="underline">love</span>{" "}
-        the feeling of finally figuring out a solution to a problem. My core
-        stack is{" "}
+        certified developer by{" "}
+        <span className="font-medium">Microsoft, IBM, META</span> and{" "}
+        <span className="font-medium">Johns Hopkins University</span>.<br></br>{" "}
+        <span className="italic">My core part of programming</span> is the
+        problem-solving aspect. I <span className="underline">love</span> the
+        feeling of finally figuring out a solution to a problem. My core stack
+        is{" "}
         <span className="font-medium">
           React, Next.js, TypeScript, JavaScript, C#, ASP.NET Core Web API,
-          Python, Django, MySQL, CSS3, HTML5
+          Python, Node.js, MySQL, CSS3, HTML5
         </span>
-        . Work with tools like Insomnia, Postman. I am always here as a
+        . Work with testing tools like Insomnia, Postman. I am always here as a
         management solution to help you set business goals, currently looking
         for a <span className="font-medium">full-time position</span> as a
         software developer.
@@ -41,13 +42,13 @@ export default function About() {
 
       <p>
         <span className="italic">When I&apos;m not coding</span>, I enjoy
-        playing tennis, developing my communication skills, reading books about
-        economics, self-development and money. I also enjoy{" "}
+        playing tennis, developing my communication and leadership skills,
+        reading books about economics, self-development, history and money. I
+        also enjoy{" "}
         <span className="font-medium">
-          working in a team, sharing and gaining new experience{" "}
-        </span>
-        I am currently working on a{" "}
-        <span className="font-medium">Microsoft Certifications</span>.
+          working in a team, sharing and gaining new experience.{" "}
+        </span>{" "}
+        {/* <span className="font-medium"></span>. */}
       </p>
     </motion.section>
   );

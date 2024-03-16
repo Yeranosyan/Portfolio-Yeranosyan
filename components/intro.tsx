@@ -82,8 +82,9 @@ export default function Intro() {
           development.
         </span>
         <br />
-        <span className="text-sm  text-gray-500 dark:text-gray-400">
-          customer-centric, cost efficient and result oriented
+        <span className="text-sm  text-gray-500 dark:text-gray-200">
+          customer-centric, cost efficient and result oriented with strong
+          leadership principles
         </span>
       </motion.h1>
       <motion.div
@@ -150,7 +151,7 @@ export default function Intro() {
 
           <a
             className="p-4 text-gray-700 flex items-center gap-2 text-[1.80rem] sm:text-[1.45rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
-            href="https://learn.microsoft.com/en-us/users/gagikyeranosyan/transcript/v0rp9h1je1mnwo5"
+            href="https://learn.microsoft.com/en-us/users/gagikyeranosyan/transcript"
             target="_blank"
           >
             <RiMicrosoftFill />

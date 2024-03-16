@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import React from "react";
 import SectionHeading from "./section-heading";
 import {
@@ -37,10 +37,9 @@ export default function Experience() {
                     : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
-              icon={item.icon}
+              icon={<Image src={item.icon} alt="Icon" width={90} height={90} />}
               iconStyle={{
-                background:
-                  theme === "light" ? "white" : "rgba(255, 255, 255,  0.05)",
+                background: theme === "light" ? "white" : "white",
                 fontSize: "1.5rem",
               }}
             >
