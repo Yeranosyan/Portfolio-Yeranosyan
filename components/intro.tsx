@@ -113,7 +113,7 @@ export default function Intro() {
           download
         >
           Download Resume{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition group-hover:text-blue-300 dark:group-hover:text-lime-300 dark:group-opacity-30" />
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition group-hover:text-blue-500 dark:group-hover:text-green-500 dark:group-opacity-30" />
         </a>
       </motion.div>
       <motion.div
