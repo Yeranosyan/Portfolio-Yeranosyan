@@ -109,11 +109,11 @@ export default function Intro() {
 
         <a
           className="group bg-white px-5 py-2 flex items-center gap-2 rounded-full outline-none border border-black/10 hover:scale-110 active:scale-105 transition cursor-pointer dark:bg-white/10"
-          href="/Gagik-Yeranosyan_Software-Engineer.pdf"
+          href="/Gagik Yeranosyan - Software Developer.pdf"
           download
         >
           Download Resume{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition group-hover:text-blue-400 dark:group-hover:text-blue-300 dark:group-opacity-30" />
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition group-hover:text-blue-300 dark:group-hover:text-lime-300 dark:group-opacity-30" />
         </a>
       </motion.div>
       <motion.div
