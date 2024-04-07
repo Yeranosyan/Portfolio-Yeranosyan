@@ -3,6 +3,8 @@ import weatherImg from "@/public/weather.png";
 import taskImg from "@/public/task-manager.png";
 import dashboardImg from "@/public/dashboard.png";
 import bilsteinImg from "@/public/bilstein.png";
+import meetingImg from "@/public/meeting.png";
+import userSystemImg from "@/public/user-system.png";
 
 // as const TypeScript features for exactly execute array don't be random strings
 export const links = [
@@ -98,6 +100,21 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Meeting - Video Call",
+    projectUrl: "https://personal-meeting.vercel.app/",
+    description:
+      "Full Stack App - Meeting is a video conferencing application that allows users to create video rooms, schedule meetings, share invitation links, and save recordings.",
+    tags: [
+      "React",
+      "Next.js",
+      "TS",
+      "Clerk",
+      "shadcn/ui",
+      "SDK for Video & Audio",
+    ],
+    imageUrl: meetingImg,
+  },
+  {
     title: "Task Manager App",
     projectUrl: "https://app-tasks-manager.vercel.app/",
     description:
@@ -119,6 +136,14 @@ export const projectsData = [
       "Generate an API key with OpenWeather to fetch current data. Employ the Postman API platform for API creation and utilization.",
     tags: ["HTML", "CSS", "JS", "Postman", "OpenWeather", "API"],
     imageUrl: weatherImg,
+  },
+  {
+    title: "Management System",
+    projectUrl: "https://alltrue-management.vercel.app",
+    description:
+      "This project is a user management system built with React and styled with Material-UI. CRUD operations are created using REQRES for testing API calls.",
+    tags: ["React", "MUI", "API", "CRUD", "Postman"],
+    imageUrl: userSystemImg,
   },
   {
     title: "User Dashboard",
