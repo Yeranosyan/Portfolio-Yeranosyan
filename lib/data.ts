@@ -165,6 +165,7 @@ export const projectsData = [
 
 export const skillsData = [
   "React.js",
+  "Redux",
   "Next.js",
   "JavaScript",
   "C#",
@@ -191,7 +192,9 @@ export const skillsData = [
   "Vercel",
   "Netlify",
   "Cloud Computing",
+  "Google Analytics",
   "Tailwind CSS",
+  "shadcn/ui",
   "Material UI",
   "Bootstrap",
   "Framer Motion",
