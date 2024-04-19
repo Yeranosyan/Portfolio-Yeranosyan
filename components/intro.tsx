@@ -6,12 +6,13 @@ import introImg from "@/public/intro.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
-import { RiLinkedinFill } from "react-icons/ri";
 import { HiDownload } from "react-icons/hi";
-import { FaGithub } from "react-icons/fa";
-import { RiMicrosoftFill } from "react-icons/ri";
-import { SiCredly } from "react-icons/si";
-import { FaYoutube } from "react-icons/fa";
+import inImg from "@/public/links-icons/in.png";
+import youtubeImg from "@/public/links-icons/youtube.png";
+import githubImg from "@/public/links-icons/github.png";
+import microsoftImg from "@/public/links-icons/microsoft.png";
+import credlyImg from "@/public/links-icons/credly.png";
+
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -71,8 +72,8 @@ export default function Intro() {
       >
         <span className="font-bold">Hello, I&apos;m Gagik Yeranosyan, </span>
         <span>
-          certified <br />
-          software engineer.{" "}
+          proficient <br />
+          software developer.{" "}
         </span>
         I build <span className="italic">websites</span>
         <span> &</span> <span className="italic">apps</span>.<br />
@@ -81,7 +82,7 @@ export default function Intro() {
           development.
         </span>
         <br />
-        <span className="text-sm  text-gray-500 dark:text-gray-200">
+        <span className="text-sm  text-gray-500 dark:text-white/50">
           customer-centric, cost efficient and result oriented with strong
           leadership principles
         </span>
@@ -124,45 +125,48 @@ export default function Intro() {
         }}
       >
         <div className="flex items-center">
-          <a
-            className="p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] sm:text-[1.2rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
-            href="https://www.linkedin.com/in/gagik-yeranosyan/"
-            target="_blank"
-          >
-            <RiLinkedinFill />
-          </a>
-
-          <a
-            className="p-4 text-gray-700 flex items-center gap-2 text-[1.55rem] sm:text-[1.3rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
-            href="https://www.youtube.com/@gagikyeranosyan"
-            target="_blank"
-          >
-            <FaYoutube />
-          </a>
-
-          <a
-            className="p-4 text-gray-700 flex items-center gap-2 text-[1.50rem] sm:text-[1.35rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
-            href="https://github.com/Yeranosyan"
-            target="_blank"
-          >
-            <FaGithub />
-          </a>
-
-          <a
-            className="p-4 text-gray-700 flex items-center gap-2 text-[1.80rem] sm:text-[1.45rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
-            href="https://learn.microsoft.com/en-us/users/gagikyeranosyan/transcript"
-            target="_blank"
-          >
-            <RiMicrosoftFill />
-          </a>
-
-          <a
-            className="p-4 text-gray-700 flex items-center gap-2 text-[2.30rem] sm:text-[1.75rem] focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80"
-            href="https://www.credly.com/users/gagik-yeranosyan"
-            target="_blank"
-          >
-            <SiCredly />
-          </a>
+          {[
+            {
+              href: "https://www.linkedin.com/in/gagik-yeranosyan/",
+              img: inImg,
+              size: "30",
+            },
+            {
+              href: "https://learn.microsoft.com/en-us/users/gagikyeranosyan/transcript",
+              img: microsoftImg,
+              size: "30",
+            },
+            {
+              href: "https://www.credly.com/users/gagik-yeranosyan",
+              img: credlyImg,
+              size: "30",
+            },
+            {
+              href: "https://github.com/Yeranosyan",
+              img: githubImg,
+              size: "30",
+            },
+            {
+              href: "https://www.youtube.com/@gagikyeranosyan",
+              img: youtubeImg,
+              size: "30",
+            },
+          ].map((item, index) => (
+            <a
+              key={index}
+              className={`p-4 text-gray-700 flex items-center focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80`}
+              href={item.href}
+              target="_blank"
+            >
+              <Image
+                className="opacity-90 hover:opacity-100"
+                src={item.img}
+                alt={`Link ${index + 1}`}
+                width={30}
+                height={30}
+              />
+            </a>
+          ))}
         </div>
       </motion.div>
     </section>
