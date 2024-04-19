@@ -3,7 +3,6 @@
 import type { SectionName } from "@/lib/types";
 import React, { useState, createContext, useContext } from "react";
 
-// In ReactJS with TypeScript, ReactNode is a type that represents a React element, an array of React elements, or a string, number, or boolean.
 type ActiveSectionContextProviderProps = {
   children: React.ReactNode;
 };
@@ -22,7 +21,7 @@ export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
   const [activeSection, setActiveSection] = useState<SectionName>("Home");
-  const [timeOfLastClick, setTimeOfLastClick] = useState(0); // I want to keep track of this, to disable the observer when user click on a links.
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0);
   return (
     <ActiveSectionContext.Provider
       value={{

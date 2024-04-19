@@ -4,12 +4,10 @@ import React, { useEffect, useState, createContext, useContext } from "react";
 
 type Theme = "light" | "dark";
 
-// In ReactJS with TypeScript, ReactNode is a type that represents a React element, an array of React elements, or a string, number, or boolean.
 type ThemeContextProviderProps = {
-  children: React.ReactNode; // children every thing inside this provider can stay a "server" component
+  children: React.ReactNode;
 };
 
-// Instantiate context
 type ThemeContextType = {
   theme: Theme;
   toggleTheme: () => void;

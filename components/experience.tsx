@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import React from "react";
 import SectionHeading from "./section-heading";
@@ -27,6 +28,7 @@ export default function Experience() {
                   theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
+                borderRadius: "1rem",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
@@ -34,7 +36,7 @@ export default function Experience() {
                 borderRight:
                   theme === "light"
                     ? "0.4rem solid #9ca3af"
-                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
+                    : "0.4rem solid rgba(255, 255, 255, .5)",
               }}
               date={item.date}
               icon={<Image src={item.icon} alt="Icon" width={90} height={90} />}
@@ -43,10 +45,17 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
+              <div className="top-0 left-2 flex gap-1 mb-5">
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+              </div>
               <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0 text-gray-700  dark:text-white/50">
+              <p className="font-normal !mt-0 text-gray-700  dark:text-white/60">
                 {item.location}
               </p>
+              <hr className="my-2 border-white-400 dark:border-gray-300/10" />
+
               <p className="!mt-1 !font-normal text-gray-500 dark:text-white/75">
                 {item.description}
               </p>

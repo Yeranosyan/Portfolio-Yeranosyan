@@ -4,7 +4,6 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import type { SectionName } from "./types";
 
 export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
-  // Animation change color for current section
   const { ref, inView } = useInView({
     threshold,
   });

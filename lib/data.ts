@@ -201,6 +201,7 @@ export const skillsData = [
   "Styled Components",
   "Visual Studio Code",
   "Visual Studio",
+  "Azure DevOps",
   "Agile",
   "Scrum",
   "Kanban",
