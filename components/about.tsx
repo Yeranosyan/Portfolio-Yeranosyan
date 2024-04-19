@@ -49,7 +49,7 @@ export default function About() {
         thrive in collaborative environments,{" "}
         <span className="font-medium">
           relishing the opportunity to both contribute to and learn from my
-          team's collective experiences.
+          teams collective experiences.
         </span>
       </p>
     </motion.section>

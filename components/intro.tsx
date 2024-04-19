@@ -28,7 +28,6 @@ export default function Intro() {
     >
       <div className="flex items-center justify-center">
         <div className="relative">
-          {/* Animate intro portrait */}
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -50,11 +49,11 @@ export default function Intro() {
               <div className="absolute bottom-3 right-2">
                 <div
                   onClick={() => setOpen(!open)}
-                  className="bg-blue-400 dark:bg-lime-400 w-3 h-3 cursor-pointer rounded-full animate-pulse"
+                  className="bg-blue-400 dark:bg-green-300 w-3 h-3 cursor-pointer rounded-full animate-pulse"
                 />
                 {open && (
-                  <div className="border border-blue-300 dark:border-lime-300 items-center justify-center flex top-[-.1rem] right-[-5.4rem] rounded-2xl w-fit px-2 absolute whitespace-nowrap">
-                    <p className="text-[10px] text-blue-300 dark:text-lime-300">
+                  <div className="border border-blue-300 dark:border-green-300/70 items-center justify-center flex top-[-.1rem] right-[-5.4rem] rounded-2xl w-fit px-2 absolute whitespace-nowrap">
+                    <p className="text-[10px] text-blue-300 dark:text-green-300/70">
                       open to work
                     </p>
                   </div>
