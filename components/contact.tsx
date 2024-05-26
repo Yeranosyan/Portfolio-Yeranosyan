@@ -3,8 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import SectionHeading from "./section-heading";
 import { sendEmail } from "@/actions/sendEmail";
+import SectionHeading from "./section-heading";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
 
@@ -16,7 +16,6 @@ export default function Contact() {
       id="contact"
       ref={ref}
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
-      // animation for contact section
       initial={{
         opacity: 0,
       }}
@@ -45,7 +44,6 @@ export default function Contact() {
         className="mt-10 flex flex-col dark:text-black"
         action={async (FormData) => {
           const { data, error } = await sendEmail(FormData);
-          // pickup some error or data in the client side form validation
           if (error) {
             toast.error(error);
             return;

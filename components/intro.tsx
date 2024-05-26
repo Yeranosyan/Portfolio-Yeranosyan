@@ -1,18 +1,17 @@
 "use client";
 
-import Image from "next/image";
-import React, { useState } from "react";
-import introImg from "@/public/intro.png";
 import Link from "next/link";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
+import Image from "next/image";
+import introImg from "@/public/intro.png";
 import inImg from "@/public/links-icons/in.png";
 import youtubeImg from "@/public/links-icons/youtube.png";
 import githubImg from "@/public/links-icons/github.png";
 import microsoftImg from "@/public/links-icons/microsoft.png";
 import credlyImg from "@/public/links-icons/credly.png";
-
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -70,16 +69,16 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Gagik Yeranosyan, </span>
         <span>
-          proficient <br />
-          software developer.{" "}
+          Hello, I&apos;m <span className="font-bold"> Gagik Yeranosyan, </span>
         </span>
         I build <span className="italic">websites</span>
         <span> &</span> <span className="italic">apps</span>.<br />
         <span>
-          My focus is <span className="underline"> full-stack </span>{" "}
-          development.
+          I prioritizes
+          <span className="font-bold"> customer satisfaction </span> by creating
+          <br />
+          top-notch solutions for millions of users.
         </span>
         <br />
         <span className="text-sm  text-gray-500 dark:text-white/50">

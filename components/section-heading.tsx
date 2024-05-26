@@ -1,6 +1,5 @@
 import React from "react";
 
-// In ReactJS with TypeScript, ReactNode is a type that represents a React element, an array of React elements, or a string, number, or boolean.
 type SectionHeadingProps = {
   children: React.ReactNode;
 };

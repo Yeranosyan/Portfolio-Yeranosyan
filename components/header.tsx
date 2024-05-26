@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
-import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
+import { links } from "@/lib/data";
+import { motion } from "framer-motion";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Header() {
@@ -14,7 +13,6 @@ export default function Header() {
     <header className="z-[999] relative ">
       <motion.div
         className="fixed top-2 left-1/2 h-[2.8rem] w-[23rem] border border-white/10 border-opacity-80 bg-white/50 bg-opacity-60 shadow-lg shadow-black/[0.03] backdrop-blur-[0.9rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] rounded-full dark:bg-white/10 dark:border-gray-800/10  dark:bg-opacity-75"
-        // create animation
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
@@ -22,14 +20,12 @@ export default function Header() {
         <ul className="flex w-[25rem] flex-wrap items-center justify-center gap-y-1 text-[.60rem] sm:text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
           {links.map((link) => (
             <motion.li
-              // create animation for links
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               className="h-3/4 flex items-center justify-center relative"
               key={link.hash}
             >
               <Link
-                // clsx() set up conditions for setting the value of the className attribute
                 className={clsx(
                   "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-200 dark:hover:text-gray-100",
                   {

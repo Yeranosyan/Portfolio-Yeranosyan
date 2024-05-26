@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useRef } from "react";
-import { projectsData } from "@/lib/data";
+import { useRef } from "react";
 import Image from "next/image";
+import { projectsData } from "@/lib/data";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { AiOutlineLink } from "react-icons/ai";
 
@@ -15,14 +15,15 @@ export default function Project({
   imageUrl,
   projectUrl,
 }: ProjectProps) {
-  // Animation  for project section
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
+
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
     <motion.div
       className="group mb-3 sm:mb-8 last:mb-0 "
