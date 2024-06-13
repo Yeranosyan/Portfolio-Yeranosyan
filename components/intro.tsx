@@ -108,7 +108,7 @@ export default function Intro() {
 
         <a
           className="group bg-white px-5 py-2 flex items-center gap-2 rounded-full outline-none border border-black/10 hover:scale-110 active:scale-105 transition cursor-pointer dark:bg-white/10"
-          href="/Gagik Yeranosyan - Software Developer.pdf"
+          href="Yeranosyan Gagik_Software Developer.pdf"
           download
         >
           Download Resume{" "}
