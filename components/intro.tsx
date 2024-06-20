@@ -12,6 +12,7 @@ import youtubeImg from "@/public/links-icons/youtube.png";
 import githubImg from "@/public/links-icons/github.png";
 import microsoftImg from "@/public/links-icons/microsoft.png";
 import credlyImg from "@/public/links-icons/credly.png";
+import twitterImg from "@/public/links-icons/twitter.png";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -126,11 +127,6 @@ export default function Intro() {
         <div className="flex items-center">
           {[
             {
-              href: "https://www.linkedin.com/in/gagik-yeranosyan/",
-              img: inImg,
-              size: "30",
-            },
-            {
               href: "https://learn.microsoft.com/en-us/users/gagikyeranosyan/transcript",
               img: microsoftImg,
               size: "30",
@@ -141,8 +137,19 @@ export default function Intro() {
               size: "30",
             },
             {
+              href: "https://www.linkedin.com/in/gagik-yeranosyan/",
+              img: inImg,
+              size: "30",
+            },
+
+            {
               href: "https://github.com/Yeranosyan",
               img: githubImg,
+              size: "30",
+            },
+            {
+              href: "https://twitter.com/gago_yerevan",
+              img: twitterImg,
               size: "30",
             },
             {
