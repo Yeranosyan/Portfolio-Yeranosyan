@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="mb-10 px-4 text-center text-gray-400">
+    <footer className=" max-w-3xl mb-10 px-4 text-center text-gray-400">
       <small className="mb-2 block text-xs">
         &copy; 2023 Gagik Yeranosyan. All rights reserved.
       </small>

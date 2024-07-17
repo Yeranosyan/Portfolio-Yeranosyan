@@ -66,12 +66,15 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-10 px-4 text-base font-medium !leading-[1.5] sm:text-3xl"
+        className="mb-10 mt-10 px-4 text-base font-medium !leading-[1.5] sm:text-2xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span>
           Hello, I&apos;m <span className="font-bold"> Gagik Yeranosyan, </span>
+          <br />
+          <span className="font-medium"> Software Developer </span> with 5+
+          years of experience. <br />
         </span>
         I build <span className="italic">websites</span>
         <span> &</span> <span className="italic">apps</span>.<br />
@@ -82,10 +85,10 @@ export default function Intro() {
           top-notch solutions for millions of users.
         </span>
         <br />
-        <span className="text-sm  text-gray-500 dark:text-white/50">
+        <p className="mt-5 text-sm text-gray-500 dark:text-white/50">
           customer-centric, cost efficient and result oriented with strong
           leadership principles
-        </span>
+        </p>
       </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4"

@@ -4,9 +4,7 @@ import taskImg from "@/public/task-manager.png";
 import dashboardImg from "@/public/dashboard.png";
 import bilsteinImg from "@/public/bilstein.png";
 import meetingImg from "@/public/meeting.png";
-import userSystemImg from "@/public/user-system.png";
-
-// as const TypeScript features for exactly execute array don't be random strings
+import healthproImg from "@/public/healthpro.png";
 export const links = [
   {
     name: "Home",
@@ -100,65 +98,113 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Meeting - Video Call",
-    projectUrl: "https://personal-meeting.vercel.app/",
+    title: "Weather App",
+    projectUrl: "https://healthpro-management.vercel.app/",
+    githubUrl: "https://github.com/Yeranosyan/health-pro",
     description:
-      "Full Stack App - Meeting is a video conferencing application that allows users to create video rooms, schedule meetings, share invitation links, and save recordings.",
+      "A healthcare HealthPro - patient management application that allows patients to easily register, book, and manage their appointments with doctors, featuring administrative tools for scheduling, confirming, and canceling appointments, along with SMS notifications, all built using Next.js.",
     tags: [
       "React",
       "Next.js",
-      "TS",
+      "TypeScript",
+      "Twillo",
+      "Appwrite",
+      "Sentry",
+      "Tailwind",
+      "Shadcn/ui",
+    ],
+    imageUrl: healthproImg,
+  },
+
+  {
+    title: "Meeting - Video Call",
+    projectUrl: "https://personal-meeting.vercel.app/",
+    githubUrl: "https://github.com/Yeranosyan/Meeting-Room-Video-Call",
+    description:
+      "Meeting is a video conferencing application that allows users to create video rooms schedule meetings share invitation links and save recordings It offers features like creating video rooms for meetings and conferences scheduling meetings and generating invitation links to share with participants saving recordings of meetings for future reference integrating React SDK for real-time video and audio communication and implementing Clerk for authentication and user management allowing users to sign up with GitHub or Google",
+    tags: [
+      "React",
+      "Next.js",
+      "TypeScript",
       "Clerk",
-      "shadcn/ui",
+      "Shadcn/ui",
+      "Tailwind",
       "SDK for Video & Audio",
     ],
     imageUrl: meetingImg,
   },
+
   {
     title: "Task Manager App",
     projectUrl: "https://app-tasks-manager.vercel.app/",
+    githubUrl: "https://github.com/Yeranosyan/Task-Manager",
     description:
-      "Full Stack App. Great account (sign-up) then (sing-in) or simply Continue whit Google through (sign-up).",
-    tags: ["React", "Styled Components", "Next.js", "Prisma", "MongoDB"],
+      "The Fullstack Task Manager Application utilizes CRUD operations and supports sign-up with Google. For data management, it employs Prisma along with MongoDB, ensuring efficient and reliable data handling. The application is fully responsive, allowing users to create accounts and easily manage their daily tasks.",
+    tags: [
+      "React",
+      "Styled Components",
+      "Tailwind CSS",
+      "Next.js",
+      "Prisma",
+      "MongoDB",
+      "Clerk",
+    ],
     imageUrl: taskImg,
   },
+
   {
     title: "E-Commerce Bilstein",
     projectUrl: "https://github.com/Yeranosyan/E-Commerce-App",
-    description: "Full Stack E-Commerce App with an Admin Dashboard & CMS.",
-    tags: ["Payload", "STRIPE", "SCSS", "React", "Next.js", "MongoDB"],
+    githubUrl: "https://github.com/Yeranosyan/E-Commerce-App",
+    description:
+      "Payload E-Commerce Bilstein allows users to sort items and supports CRUD operations for admin management The application handles CMS and access control with basic role-based access control to determine user permissions based on their roles Admins can access the Payload admin panel to manage the store view all data and perform all operations Customers cannot access the Payload admin panel and can perform limited operations based on their user permissions The application features pre-configured Payload config authentication access control shopping cart checkout paywall layout builder SEO and a website.",
+    tags: [
+      "Payload CMS",
+      "Stripe",
+      "SCSS",
+      "React",
+      "Next.js",
+      "MongoDB",
+      "Tailwind",
+    ],
     imageUrl: bilsteinImg,
   },
+
   {
     title: "Weather App",
-    projectUrl: "https://github.com/Yeranosyan/Frontend-Weather-App",
+    projectUrl: "https://openweathermap.org/",
+    githubUrl: "https://github.com/Yeranosyan/Frontend-Weather-App",
     description:
-      "Generate an API key with OpenWeather to fetch current data. Employ the Postman API platform for API creation and utilization.",
-    tags: ["HTML", "CSS", "JS", "Postman", "OpenWeather", "API"],
+      "The Weather App provides current weather data using the OpenWeatherMap API. With the Free Plan, I accessed current weather, a 3-hour forecast for 5 days, air pollution info, and geocoding. For validation and testing, I used Postman to implement and verify GET requests. The app fetches data with JavaScript's fetch() method and styles it with CSS and Material Symbols icons.",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Postman",
+      "OpenWeather",
+      "API",
+      "Insomnia",
+    ],
     imageUrl: weatherImg,
   },
-  {
-    title: "Management System",
-    projectUrl: "https://alltrue-management.vercel.app",
-    description:
-      "This project is a user management system built with React and styled with Material-UI. CRUD operations are created using REQRES for testing API calls.",
-    tags: ["React", "MUI", "API", "CRUD", "Postman"],
-    imageUrl: userSystemImg,
-  },
+
   {
     title: "User Dashboard",
     projectUrl: "https://yeranosyan-dashboard.vercel.app/",
+    githubUrl: "https://github.com/Yeranosyan/Frontend-Dashboard",
     description:
-      "Build a User Dashboard with a sidebar using useEffect to manage post-render actions and useState to handle component state.",
-    tags: ["Next.js", "React", "Chart.js", "Tailwind CSS"],
+      "The User Dashboard includes charts, such as a Bar Chart, Recent Orders, and Customers pages. To accomplish this, I used Next.js and npm to install packages and their dependencies. Additionally, I utilized Tailwind CSS for styling, always striving to follow modern design principles. All my data is saved as an ArrayList, which is an object capable of storing a group of other objects.",
+    tags: ["Next.js", "React", "Chart.js", "Tailwind", "Styled Components"],
     imageUrl: dashboardImg,
   },
+
   {
     title: "Car Trade",
     projectUrl: "https://yeranosyan-car-trade.vercel.app/",
+    githubUrl: "https://github.com/Yeranosyan/Frontend-Car-Trade",
     description:
-      "Crafting a contemporary design with intuitive category filters, incorporating seamless animations, leveraging powerful libraries and fully responsive.",
-    tags: ["HTML", "CSS", "JS", "Swiper", "ScrollReveal", "MixItUp"],
+      "The Car Sales site features a dark theme and focuses on HTML semantics for readability and SEO optimization. I integrated ScrollReveal for viewport animations, Swiper for a sleek catalog slideshow, and MixItUp to filter car categories by brand.",
+    tags: ["HTML", "CSS", "JavaScript", "Swiper", "ScrollReveal", "MixItUp"],
     imageUrl: carsImg,
   },
 ] as const;
