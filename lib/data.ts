@@ -98,7 +98,7 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Weather App",
+    title: "HealthPro",
     projectUrl: "https://healthpro-management.vercel.app/",
     githubUrl: "https://github.com/Yeranosyan/health-pro",
     description:

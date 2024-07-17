@@ -161,7 +161,7 @@ export default function Intro() {
               size: "30",
             },
           ].map((item, index) => (
-            <a
+            <Link
               key={index}
               className={`p-4 text-gray-700 flex items-center focus:scale-[1.15] hover:text-gray-900 hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:text-white/80`}
               href={item.href}
@@ -174,7 +174,7 @@ export default function Intro() {
                 width={30}
                 height={30}
               />
-            </a>
+            </Link>
           ))}
         </div>
       </motion.div>
