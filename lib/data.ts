@@ -210,6 +210,7 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
+  "Angular",
   "React.js",
   "Redux",
   "Next.js",
@@ -223,7 +224,7 @@ export const skillsData = [
   "npm/yarn",
   "Git",
   "GitHub",
-  "MySQL",
+  "SQL",
   "Prisma",
   "MongoDB",
   "API's",
@@ -237,7 +238,6 @@ export const skillsData = [
   "Stripe",
   "Vercel",
   "Netlify",
-  "Cloud Computing",
   "Google Analytics",
   "Tailwind CSS",
   "shadcn/ui",
@@ -248,6 +248,8 @@ export const skillsData = [
   "Visual Studio Code",
   "Visual Studio",
   "Azure DevOps",
+  "Vertex AI",
+  "Cypress",
   "Agile",
   "Scrum",
   "Kanban",

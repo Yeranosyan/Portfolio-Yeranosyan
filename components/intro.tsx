@@ -73,7 +73,7 @@ export default function Intro() {
         <span>
           Hello, I&apos;m <span className="font-bold"> Gagik Yeranosyan, </span>
           <br />
-          <span className="font-medium"> Software Developer </span> with 5+
+          <span className="font-medium"> Software Developer </span> with 6+
           years of experience. <br />
         </span>
         I build <span className="italic">websites</span>
@@ -112,7 +112,7 @@ export default function Intro() {
 
         <a
           className="group bg-white px-5 py-2 flex items-center gap-2 rounded-full outline-none border border-black/10 hover:scale-110 active:scale-105 transition cursor-pointer dark:bg-white/10"
-          href="Gagik Yeranosyan - Software Developer.pdf"
+          href="Gagik Yeranosyan - Software Engineer.pdf"
           download
         >
           Download Resume{" "}
