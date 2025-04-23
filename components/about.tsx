@@ -33,15 +33,16 @@ export default function About() {
         <span className="underline">love</span> the feeling of finally figuring
         out a solution to a problem. My core stack is{" "}
         <span className="font-medium">
-          React, Next.js, TypeScript, JavaScript, Angular, C#, ASP.NET Core Web
-          API, Python, Node.js, SQL, CSS3, HTML5.{" "}
+          React, Angular, Redux, Next.js, TypeScript, JavaScript, C#, ASP.NET
+          Core, Node.js, SQL, CSS3, HTML5.{" "}
         </span>
-        Work with testing tools like Insomnia, Postman. I am always here as a
-        management solution to help you set business goals, currently looking
-        for a <span className="font-medium">full-time position</span> as a
-        software developer.
       </p>
-
+      <span>
+        I am always here as a management solution to help you set business
+        goals, currently looking for a{" "}
+        <span className="font-medium">full-time position</span> as a software
+        developer.
+      </span>
       <p>
         <span className="italic">When I&apos;m not coding</span>, I enjoy
         playing tennis, developing my communication and leadership skills,
