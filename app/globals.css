@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* use in experience section */
+/* use in education section */
 html {
   --line-color: #e5e7eb;
 }
-/* use in experience section for dark mode*/
+/* use in education section for dark mode*/
 html.dark {
   --line-color: rgba(255, 255, 255, 0.05);
 }

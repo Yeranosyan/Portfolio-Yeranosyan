@@ -23,8 +23,8 @@ export const links = [
     hash: "#skills",
   },
   {
-    name: "Experience",
-    hash: "#experience",
+    name: "Education",
+    hash: "#education",
   },
   {
     name: "Contact",
@@ -32,7 +32,7 @@ export const links = [
   },
 ] as const;
 
-export const experiencesData = [
+export const educationsData = [
   {
     title: "Microsoft C#, ASP.NET Web APIs Professional Certificate",
     location: "Vancouver, BC",
