@@ -25,29 +25,21 @@ export default function About() {
         <span className="font-medium">back-end</span> web development. I am a
         certified developer by{" "}
         <span className="font-medium">Microsoft, IBM, META</span> and{" "}
-        <span className="font-medium">Johns Hopkins University</span>. I have
-        strong leadership principles and customer obsession, and I love to take
-        responsibility for any issues that arise.
-        <br></br> <span className="italic">My core part of programming</span> is
-        the problem-solving aspect, write clean and efficient code. I{" "}
-        <span className="underline">love</span> the feeling of finally figuring
-        out a solution to a problem. My core stack is{" "}
+        <span className="font-medium">Johns Hopkins University</span>.<br></br>{" "}
+        I always contribute by helping customers make the best possible
+        decisions. I focus on understanding what problem I&apos;m solving, what
+        matters most to our users, and how I can deliver the best possible
+        experience. My core stack is{" "}
         <span className="font-medium">
-          React, Angular, Redux, Next.js, TypeScript, JavaScript, C#, ASP.NET
-          Core, Node.js, SQL, CSS3, HTML5.{" "}
+          HTML, CSS, JavaScript, SQL, React, Angular, Redux, Next.js,
+          TypeScript, C#, ASP.NET Core, Node.js.{" "}
         </span>
       </p>
-      <span>
-        I am always here as a management solution to help you set business
-        goals, currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
-      </span>
       <p>
-        <span className="italic">When I&apos;m not coding</span>, I enjoy
-        playing tennis, developing my communication and leadership skills,
-        reading books about economics, self-development, history and money. I
-        thrive in collaborative environments,{" "}
+        When I&apos;m not coding, I enjoy playing tennis, developing my
+        communication and leadership skills, reading books about economics,
+        self-development, history and money. I thrive in collaborative
+        environments,{" "}
         <span className="font-medium">
           relishing the opportunity to both contribute to and learn from my
           teams collective experiences.

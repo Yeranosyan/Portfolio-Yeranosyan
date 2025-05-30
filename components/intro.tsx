@@ -109,15 +109,6 @@ export default function Intro() {
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
-
-        <a
-          className="group bg-white px-5 py-2 flex items-center gap-2 rounded-full outline-none border border-black/10 hover:scale-110 active:scale-105 transition cursor-pointer dark:bg-white/10"
-          href="Gagik Yeranosyan - Software Developer.docx"
-          download
-        >
-          Download Resume{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition group-hover:text-blue-500 dark:group-hover:text-green-500 dark:group-opacity-30" />
-        </a>
       </motion.div>
       <motion.div
         className="flex flex-wrap justify-center items-center gap-2 px-4"
