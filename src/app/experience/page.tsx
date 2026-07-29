@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import PageIntro from "@/components/layout/page-intro";
 import Section from "@/components/layout/section";
-import Panel from "@/components/ui/panel";
-import Pipeline from "@/components/ui/pipeline";
+import TickChart from "@/components/ui/tick-chart";
 import Tag from "@/components/ui/tag";
 import GhostNumber from "@/components/ui/ghost-number";
 import { experiencesData } from "@/lib/data";
@@ -33,6 +32,53 @@ const TENURE = TENURE_STARTS.map((item, index) => {
 
 const TOTAL_MONTHS = TENURE.reduce((sum, item) => sum + item.months, 0);
 
+const AXIS_START = 2019;
+const AXIS_END = 2027;
+const TICKS_PER_YEAR = 6;
+
+const START_MONTHS = (TENURE[0].year - AXIS_START) * 12 + TENURE[0].month;
+
+const TENURE_TICKS = Array.from(
+  { length: (AXIS_END - AXIS_START) * TICKS_PER_YEAR },
+  (_, index) => {
+    const monthsIn = (index * 12) / TICKS_PER_YEAR - START_MONTHS;
+    if (monthsIn < 0) return { fill: 0, tone: "muted" as const };
+
+    let elapsed = 0;
+    for (const role of TENURE) {
+      elapsed += role.months;
+      if (monthsIn < elapsed) {
+        return {
+          fill: Math.min(monthsIn / TOTAL_MONTHS, 1),
+          tone: role.tone,
+        };
+      }
+    }
+
+    return { fill: 1, tone: TENURE[TENURE.length - 1].tone };
+  },
+);
+
+const LONGEST = TENURE.reduce((top, item) =>
+  item.months > top.months ? item : top,
+);
+
+const TENURE_MARKERS = [
+  {
+    at:
+      ((START_MONTHS + LONGEST.months) / ((AXIS_END - AXIS_START) * 12)) * 100,
+    value: String(LONGEST.months),
+    label: LONGEST.company,
+    variant: "dashed" as const,
+  },
+  {
+    at: ((START_MONTHS + TOTAL_MONTHS) / ((AXIS_END - AXIS_START) * 12)) * 100,
+    value: String(TOTAL_MONTHS),
+    label: "Months total",
+    variant: "solid" as const,
+  },
+];
+
 export default function ExperiencePage() {
   return (
     <>
@@ -59,14 +105,11 @@ export default function ExperiencePage() {
         title="Where the time went."
         intro="Each segment is sized by months served, running from the earliest role on the left to the current one on the right."
       >
-        <Panel tone="slab" className="p-6 sm:p-10">
-          <Pipeline
+        <div>
+          <TickChart
             motionKey="tenure"
-            thickness="thick"
-            segments={TENURE.map((item) => ({
-              span: (item.months / TOTAL_MONTHS) * 100,
-              tone: item.tone,
-            }))}
+            ticks={TENURE_TICKS}
+            markers={TENURE_MARKERS}
             scale={["2019", "2021", "2023", "2025", "2027"]}
           />
 
@@ -80,13 +123,17 @@ export default function ExperiencePage() {
                 <span className="min-w-0">
                   <span className="block text-sm">{item.company}</span>
                   <span className="block text-xs text-ink-muted">
-                    <CountUp value={item.months} /> months
+                    <CountUp
+                      value={item.months}
+                      motionKey={`tenure-months-${item.company}`}
+                    />{" "}
+                    months
                   </span>
                 </span>
               </li>
             ))}
           </ul>
-        </Panel>
+        </div>
       </Section>
 
       <Section eyebrow="Roles" title="The detail." className="pt-0">

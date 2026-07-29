@@ -94,7 +94,11 @@ export default function EducationPage() {
             const position = axisPosition(item.year, AXIS_START, AXIS_END);
 
             return (
-              <Reveal key={item.title} motionKey={`cred-${item.title}`}>
+              <Reveal
+                key={item.title}
+                motionKey={`cred-${item.title}`}
+                style={{ "--stack-index": index } as React.CSSProperties}
+              >
                 <article
                   className={clsx(
                     "folder",
@@ -121,6 +125,7 @@ export default function EducationPage() {
                         <Stat
                           value={item.year}
                           label={item.institution}
+                          motionKey={`stat-cred-${item.title}`}
                           size="md"
                         />
                         <p className="folder__where">{item.location}</p>
@@ -152,6 +157,7 @@ export default function EducationPage() {
               </Reveal>
             );
           })}
+          <span aria-hidden className="creds__tail" />
         </div>
       </Section>
     </>

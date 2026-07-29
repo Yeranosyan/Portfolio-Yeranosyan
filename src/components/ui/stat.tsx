@@ -10,6 +10,7 @@ type StatProps = {
   label: string;
   hint?: string;
   size?: StatSize;
+  motionKey?: string;
   className?: string;
 };
 
@@ -19,6 +20,7 @@ export default function Stat({
   label,
   hint,
   size = "md",
+  motionKey,
   className,
 }: StatProps) {
   const parts = splitNumeric(value);
@@ -30,7 +32,11 @@ export default function Stat({
         {parts ? (
           <>
             {parts.prefix}
-            <CountUp value={parts.value} precision={precision} />
+            <CountUp
+              value={parts.value}
+              motionKey={motionKey ?? `stat-${label}-${value}`}
+              precision={precision}
+            />
             {parts.suffix}
           </>
         ) : (

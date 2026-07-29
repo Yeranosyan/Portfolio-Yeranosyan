@@ -1,7 +1,7 @@
 import Section from "@/components/layout/section";
 import Panel from "@/components/ui/panel";
 import Reveal from "@/components/motion/reveal";
-import GhostNumber from "@/components/ui/ghost-number";
+import DotMatrixText from "@/components/ui/dot-matrix-text";
 import { practice } from "@/lib/data";
 
 export default function Practice() {
@@ -24,10 +24,16 @@ export default function Practice() {
             delay={index * 90}
           >
             <Panel tone="plain" className="practice__card">
-              <GhostNumber className="practice__index">
-                {String(index + 1).padStart(2, "0")}
-              </GhostNumber>
-              <h3 className="practice__title">{pillar.title}</h3>
+              <span aria-hidden className="practice__index">
+                <DotMatrixText
+                  value={String(index + 1).padStart(2, "0")}
+                  size="md"
+                  tone="ghost"
+                />
+              </span>
+              <h3 className="practice__title">
+                <DotMatrixText value={pillar.title} tone="ink" wrap />
+              </h3>
               <p className="practice__body">{pillar.body}</p>
             </Panel>
           </Reveal>

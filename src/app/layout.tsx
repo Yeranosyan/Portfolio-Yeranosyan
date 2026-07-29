@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Toaster } from "react-hot-toast";
 import Script from "next/script";
+import Toaster from "@/components/ui/toaster";
 import SiteHeader from "@/components/layout/site-header";
 import SiteFooter from "@/components/layout/site-footer";
 import { site } from "@/lib/site";
@@ -62,7 +62,7 @@ export default function RootLayout({
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
-        <Toaster position="top-right" />
+        <Toaster />
       </body>
     </html>
   );

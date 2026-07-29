@@ -41,6 +41,25 @@ export const skillGroups = [
     ],
   },
   {
+    name: "AI-assisted development",
+    summary: "Prompting and AI tooling used to build and ship day to day.",
+    items: [
+      "Claude",
+      "ChatGPT",
+      "Claude Code",
+      "GitHub Copilot",
+      "Cursor",
+      "Prompt engineering",
+      "AI pair programming",
+      "AI-assisted refactoring",
+      "AI-assisted code review",
+      "Test generation",
+      "Debugging with AI",
+      "Documentation drafting",
+      "Exploring Codebases with AI",
+    ],
+  },
+  {
     name: "Data",
     summary: "Modeling, persistence, and reporting.",
     items: [

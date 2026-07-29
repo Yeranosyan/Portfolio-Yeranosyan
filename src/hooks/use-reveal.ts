@@ -19,11 +19,13 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
   const ref = useRef<T | null>(null);
   const [inView, setInView] = useState(false);
 
-  const skip = useSyncExternalStore(
+  const stored = useSyncExternalStore(
     subscribe,
     () => motionDisarmed() || hasPlayed(key),
     () => true,
   );
+
+  const skip = inView ? false : stored;
 
   useEffect(() => {
     if (skip) return;

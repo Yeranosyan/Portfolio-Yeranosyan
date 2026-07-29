@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageIntro from "@/components/layout/page-intro";
 import Section from "@/components/layout/section";
-import Panel from "@/components/ui/panel";
+import MeasureChart from "@/components/ui/measure-chart";
 import Pipeline from "@/components/ui/pipeline";
 import Stat from "@/components/ui/stat";
 import Tag from "@/components/ui/tag";
@@ -23,6 +23,43 @@ export const DISTRIBUTION = toSpans(
 );
 
 const TONES = ["brand", "accent"] as const;
+
+const BUILD_LAYERS = ["Frontend", "Backend", "AI-assisted development", "Data"];
+
+const BUILD = skillGroups.filter((group) => BUILD_LAYERS.includes(group.name));
+const SUPPORT = skillGroups.filter(
+  (group) => !BUILD_LAYERS.includes(group.name),
+);
+
+const BUILD_TOTAL = BUILD.reduce((sum, group) => sum + group.items.length, 0);
+const SUPPORT_TOTAL = SUPPORT.reduce(
+  (sum, group) => sum + group.items.length,
+  0,
+);
+
+const LARGEST = BUILD.reduce((top, group) =>
+  group.items.length > top.items.length ? group : top,
+);
+
+const BAR_SEGMENTS = BUILD.map((group, index) => ({
+  span: (group.items.length / BUILD_TOTAL) * 100,
+  tone: TONES[index % TONES.length],
+}));
+
+const MEASURE_MARKERS = [
+  {
+    at: 0,
+    value: String(LARGEST.items.length),
+    label: LARGEST.name,
+    variant: "dashed" as const,
+  },
+  {
+    at: 100,
+    value: String(TOTAL),
+    label: "Technologies",
+    variant: "solid" as const,
+  },
+];
 
 export default function SkillsPage() {
   return (
@@ -48,16 +85,15 @@ export default function SkillsPage() {
       <Section
         eyebrow="Distribution"
         title="Weighted toward the interface."
-        intro="Segment width shows how many technologies sit in each layer — a map of where the depth is, not a self-assessed score."
+        intro="The bar carries the build layers, sized by how many technologies sit in each. Every tick after it is one technology from the layers that support them."
       >
-        <Panel tone="slab" className="p-6 sm:p-10">
-          <Pipeline
+        <div>
+          <MeasureChart
             motionKey="skill-distribution"
-            thickness="thick"
-            segments={DISTRIBUTION.map((span, index) => ({
-              span,
-              tone: TONES[index % TONES.length],
-            }))}
+            barShare={(BUILD_TOTAL / TOTAL) * 100}
+            segments={BAR_SEGMENTS}
+            ticks={SUPPORT_TOTAL}
+            markers={MEASURE_MARKERS}
           />
 
           <ul className="mt-8 grid gap-x-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -65,20 +101,26 @@ export default function SkillsPage() {
               <li key={group.name} className="flex items-baseline gap-2">
                 <span
                   aria-hidden
-                  className={`mt-1 h-2 w-2 shrink-0 rounded-full dot--${
-                    TONES[index % TONES.length]
+                  className={`mt-1 h-2 w-2 shrink-0 rounded-full ${
+                    BUILD_LAYERS.includes(group.name)
+                      ? `dot--${TONES[BUILD.indexOf(group) % TONES.length]}`
+                      : "dot--muted"
                   }`}
                 />
                 <span className="min-w-0">
                   <span className="block text-sm">{group.name}</span>
                   <span className="block text-xs text-ink-muted">
-                    <CountUp value={group.items.length} /> technologies
+                    <CountUp
+                      value={group.items.length}
+                      motionKey={`skill-count-${group.name}`}
+                    />{" "}
+                    technologies
                   </span>
                 </span>
               </li>
             ))}
           </ul>
-        </Panel>
+        </div>
       </Section>
 
       <Section
@@ -97,6 +139,7 @@ export default function SkillsPage() {
                     <Stat
                       value={group.items.length}
                       label="Technologies"
+                      motionKey={`stat-skill-${group.name}`}
                       size="sm"
                     />
                     <Pipeline
