@@ -1,0 +1,114 @@
+@import "tailwindcss";
+@import "./styles/components.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source "../**/*.{js,ts,jsx,tsx,mdx}";
+
+:root {
+  --canvas: #ededed;
+  --canvas-sunken: #e4e4e4;
+  --panel: #f7f7f7;
+  --panel-raised: #ffffff;
+  --slab: #232323;
+  --slab-ink: #f2f2f2;
+
+  --ink: #101010;
+  --ink-soft: #4a4a4a;
+  --ink-muted: #8d8d8d;
+  --ink-faint: #b4b4b4;
+
+  --hairline: rgba(0, 0, 0, 0.11);
+  --hairline-strong: rgba(0, 0, 0, 0.24);
+
+  --ghost: #dcdcdc;
+
+  --pipe-rail: rgba(0, 0, 0, 0.07);
+  --pipe-hatch: rgba(0, 0, 0, 0.22);
+}
+
+.dark {
+  --canvas: #090909;
+  --canvas-sunken: #050505;
+  --panel: #121212;
+  --panel-raised: #191919;
+  --slab: #161616;
+  --slab-ink: #f2f2f2;
+
+  --ink: #f4f4f4;
+  --ink-soft: #c2c2c2;
+  --ink-muted: #7d7d7d;
+  --ink-faint: #4d4d4d;
+
+  --hairline: rgba(255, 255, 255, 0.11);
+  --hairline-strong: rgba(255, 255, 255, 0.26);
+
+  --ghost: #1d1d1d;
+
+  --pipe-rail: rgba(255, 255, 255, 0.08);
+  --pipe-hatch: rgba(255, 255, 255, 0.24);
+}
+
+@theme inline {
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: Arial, Helvetica, sans-serif;
+
+  --color-canvas: var(--canvas);
+  --color-canvas-sunken: var(--canvas-sunken);
+  --color-panel: var(--panel);
+  --color-panel-raised: var(--panel-raised);
+  --color-slab: var(--slab);
+  --color-slab-ink: var(--slab-ink);
+
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+
+  --color-hairline: var(--hairline);
+  --color-hairline-strong: var(--hairline-strong);
+  --color-ghost: var(--ghost);
+
+  --color-brand: #ff5400;
+  --color-accent: #ffbe00;
+  --color-rust: #762a05;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--hairline);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-brand, #ff5400);
+    color: #fff;
+  }
+}
+
+@utility text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--ghost);
+}
+
+@utility bg-hatch {
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--pipe-hatch) 0 1.5px,
+    transparent 1.5px 7px
+  );
+}
