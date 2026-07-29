@@ -1,0 +1,98 @@
+export const educationsData = [
+  {
+    title: "Technical Writing Program",
+    issuer: "BCIT",
+    chartLabel: "BCIT",
+    institution: "British Columbia Institute of Technology",
+    location: "Vancouver, BC",
+    date: "2026",
+    year: 2026,
+    focus: ["Technical Writing"],
+    description:
+      "Documentation practice for engineering teams: structuring reference material, writing procedures people can follow, editing for plain language, and adapting a single source for several audiences.",
+  },
+  {
+    title: "C#, ASP.NET Web APIs Professional Certificate",
+    issuer: "Microsoft",
+    chartLabel: "Microsoft",
+    institution: "Microsoft",
+    location: "Vancouver, BC",
+    date: "Mar 2024",
+    year: 2024,
+    focus: ["ASP.NET Web APIs"],
+    description:
+      "C# language fundamentals and .NET application structure, covering data types, string formatting, and collections. Includes building REST services with ASP.NET Web APIs, plus debugging and exception handling.",
+  },
+  {
+    title: "Full-Stack Software Developer Professional Certificate",
+    issuer: "IBM",
+    chartLabel: "IBM",
+    institution: "IBM",
+    location: "Vancouver, BC",
+    date: "Nov 2023",
+    year: 2023,
+    focus: ["Full-Stack"],
+    description:
+      "Full-stack development with an emphasis on RESTful API design for secure data exchange using Python, Flask, and Django. Covers object-relational mapping, the Model-View-Template pattern, and containerized delivery with Docker on IBM Cloud.",
+  },
+  {
+    title: "Full-Stack Engineer Certificate",
+    issuer: "Meta",
+    chartLabel: "Meta",
+    institution: "Meta",
+    location: "Vancouver, BC",
+    date: "Oct 2023",
+    year: 2023,
+    focus: ["Full-Stack Engineer"],
+    description:
+      "End-to-end application development with React on the front end and Python, Django, Node.js, and Express services on the back end. Focused on reusable components and performant, data-intensive user experiences.",
+  },
+  {
+    title: "Back-End Developer Professional Certificate",
+    issuer: "Meta",
+    chartLabel: "Meta",
+    institution: "Meta",
+    location: "Vancouver, BC",
+    date: "Sep 2023",
+    year: 2023,
+    focus: ["Back-End"],
+    description:
+      "Back-end development in Python and Django, covering relational data modeling in MySQL with primary and foreign key relationships, REST API design, serialization, and API testing with Postman and Insomnia.",
+  },
+  {
+    title: "Front-End Developer Professional Certificate",
+    issuer: "Meta",
+    chartLabel: "Meta",
+    institution: "Meta",
+    location: "Vancouver, BC",
+    date: "Jul 2023",
+    year: 2023,
+    focus: ["Front-End"],
+    description:
+      "React from fundamentals through advanced patterns, including useState, useEffect, useContext, useReducer, and the Context API, plus styling with Tailwind CSS, Styled Components, and Tremor.",
+  },
+  {
+    title: "Web Development Architecture",
+    issuer: "Johns Hopkins University",
+    chartLabel: "Johns Hopkins",
+    institution: "Johns Hopkins University",
+    location: "Vancouver, BC",
+    date: "Aug 2022",
+    year: 2022,
+    focus: ["Architecture"],
+    description:
+      "HTML, CSS, SASS, and JavaScript with an emphasis on the Document Object Model as a logical tree, responsive layout techniques, and custom styling systems.",
+  },
+  {
+    title: "Bachelor of Economics",
+    issuer: "Central Ukrainian National Technical University",
+    chartLabel: "Economics degree",
+    institution: "Central Ukrainian National Technical University",
+    location: "Ukraine",
+    date: "2013 — 2016",
+    year: 2016,
+    focus: ["Economics"],
+    description:
+      "Evaluated by World Education Services. Coursework spanned computing fundamentals, mathematical modeling, and data analysis alongside economic cycles, business operations, entrepreneurship, commercial law, logistics, and sales management.",
+  },
+] as const;

@@ -1,105 +1,102 @@
-<h1 align="center">Portfolio Website - Gagik Yeranosyan</h1>
+<div align="center">
 
-<p align="center">
-  Creating a personal portfolio involved crafting something that was both easy to use and concrete. Naturally, I opted for React as the chosen technology. Moreover, I wanted to incorporate email connectivity into the portfolio. Therefore, I selected Next.js 13 with TypeScript and utilized the TSX syntax extension to TypeScript. This allowed me to write code that was type-checked and enabled me to become more proficient.
-</p>
+# Hey — I'm Gagik
 
-<p align="center">
-  For animations, I made use of the Framer Motion library in React, which offers comprehensive documentation for implementing a wide range of animations. To achieve this, I simply needed to create a <motion /> component, and everything was set up for implementing the desired animation. For styling, I turned to Tailwind CSS, and through using it, I gained a deeper understanding of how to write custom values, resulting in an easily attainable, modern design for my portfolio.
-</p>
+**Senior Software Engineer**
 
-<p align="center">
-  Email functionality is a crucial feature for effective communication in both professional and personal settings. To implement this, I chose the React Email library developed by the Resend team. By using Resend, I acquired the RESEND_API_KEY, which I placed in the root directory of my project within a .env file. I integrated the React Toast library to provide notifications, conveying the sending status. Additionally, I ensured the capability to track navigation and implement a light-dark mode using the Context API.
-</p>
+I build software that removes manual work.
+This repository is my portfolio — and I designed every pixel of it myself.
 
-<p align="center">
-  In terms of data storage, I opted for an ArrayList. I utilized "as const" to make an object or array immutable, enhancing the robustness of my application.
-</p>
+</div>
 
-<h2 align="center">Tech Stack</h2>
+---
 
-<p align="center">
-  <ul>
-    <li><strong>React Portfolio Website</strong></li>
-    <li><strong>Next.js App</strong></li>
-    <li><strong>Framer Motion</strong></li>
-    <li><strong>TypeScript</strong></li>
-    <li><strong>Tailwind CSS</strong></li>
-    <li><strong>React Context API</strong></li>
-  </ul>
-</p>
+## About me
 
-<h2 align="center">Start My Portfolio</h2>
+I'm a Senior Software Engineer with **6+ years** of experience, based in Vancouver.
 
-<p align="center">
-  <ol>
-    <li>
-      Create Next.js app:
-      <pre>
-        <code>npx create-next-app@latest</code>
-      </pre>
-    </li>
-    <li>
-      Run development server:
-      <pre>
-        <code>npm run dev</code>
-      </pre>
-    </li>
-    <li>
-      Install necessary packages:
-      <ul>
-        <li>
-          React Icons:
-          <pre>
-            <code>npm i react-icons</code>
-          </pre>
-        </li>
-        <li>
-          Framer Motion:
-          <pre>
-            <code>npm i framer-motion</code>
-          </pre>
-        </li>
-        <li>
-          clsx for setting the value of the className attribute:
-          <pre>
-            <code>npm i clsx</code>
-          </pre>
-        </li>
-        <li>
-          React Intersection Observer:
-          <pre>
-            <code>npm i react-intersection-observer</code>
-          </pre>
-        </li>
-        <li>
-          React Vertical Timeline Component:
-          <pre>
-            <code>npm i react-vertical-timeline-component</code>
-          </pre>
-          <pre>
-            <code>npm i --save-dev @types/react-vertical-timeline-component</code>
-          </pre>
-        </li>
-      </ul>
-    </li>
-    <li>
-      Create API key using <a href="https://resend.com/">Resend</a>:
-      <pre>
-        <code>npm i resend@0.16.0</code>
-      </pre>
-    </li>
-    <li>
-      Styling email using <a href="https://react.email/">React Email</a>:
-      <pre>
-        <code>npm i @react-email/components @react-email/tailwind</code>
-      </pre>
-    </li>
-    <li>
-      Styling alert message for form submission using <a href="https://react-hot-toast.com/">React Hot Toast</a>:
-      <pre>
-        <code>npm i react-hot-toast</code>
-      </pre>
-    </li>
-  </ol>
-</p>
+I've shipped production software for **fintech, healthcare, heavy industry, and
+robotics** — Marqeta and Uber, Excellus BlueCross BlueShield, Finning and
+Caterpillar, SoftBank Robotics, and The Wasserstrom Company. Payments portals,
+clinical prescription tools, equipment dashboards, robot fleet management.
+
+Different domains, same job every time: take an expensive manual process and turn
+it into software people actually trust.
+
+I work across the whole stack — React, Next.js, Angular, and TypeScript on the
+front end; Node.js, C#, ASP.NET Core, and SQL behind it. I work closely with
+product managers, designers, business stakeholders, and fellow engineers, and I
+care about the engineering practices that let a team keep moving after I hand the
+work over.
+
+---
+
+## About this site
+
+I built it with **Next.js**, **TypeScript**, and **Tailwind CSS**.
+And I designed it myself — the layout, the type, the color, the charts, all of it.
+
+The idea behind the design is simple: **show the numbers, not the adjectives.**
+
+Most developer portfolios open with a wall of skill logos. I wanted mine to open
+with outcomes — 60% lower call handling time, 80% test coverage, 50% faster
+onboarding — and to draw them as charts instead of listing them as bullet points.
+Every figure on the site traces back to a real engagement.
+
+### The look
+
+It's meant to feel like an instrument panel rather than a brochure.
+
+- A light-grey canvas with oversized outlined numerals holding the structure
+- **Pipeline charts** — segmented tracks with stem markers — carrying the real data
+- Orange and amber accents that stay identical in both themes, so a chart always
+  reads the same way
+- A light theme and a dark theme, switchable, neither one an afterthought
+
+### The motion
+
+Charts grow from zero, numbers count up, and cards lift into place as you scroll —
+but only **once**. Scroll back up and nothing replays; the site remembers what it
+has already shown you for as long as your tab is open. Close it or hard-refresh
+and it starts fresh.
+
+If your system asks for reduced motion, none of it runs at all.
+
+### Four pages
+
+|                |                                                                      |
+| :------------- | :------------------------------------------------------------------- |
+| **Home**       | Who I am, and the three problems I get hired to fix                  |
+| **Experience** | Five roles, with what each one actually changed                      |
+| **Skills**     | The stack, grouped by where it sits in a system                      |
+| **Education**  | BCIT technical writing, plus Microsoft, IBM, Meta, and Johns Hopkins |
+
+---
+
+## A note on the craft
+
+Nothing here is decorative-only. The colors are named by role rather than by hue,
+so the two themes stay in step from a single definition. The components are small
+and reusable. The styling lives in one stylesheet, which keeps the markup readable.
+
+And it's covered by **118 tests** — not screenshot tests, but tests for the things
+that would quietly break: that the charts add up, that the dates stay in order,
+that no number on the site ever claims more than my résumé supports.
+
+---
+
+<div align="center">
+
+### Built in Vancouver, BC
+
+**49.2827° N, 123.1207° W**
+
+<br>
+
+[LinkedIn](https://www.linkedin.com/in/gagik-yeranosyan/) ·
+[GitHub](https://github.com/Yeranosyan) ·
+[Email](mailto:gagik.yeranosyan14@gmail.com)
+
+<sub>© 2026 Gagik Yeranosyan</sub>
+
+</div>

@@ -1,0 +1,118 @@
+"use client";
+
+import clsx from "clsx";
+import { useReveal } from "@/hooks/use-reveal";
+import CountUp from "@/components/motion/count-up";
+import { splitNumeric } from "@/lib/utils/text";
+
+export type PipeTone = "brand" | "accent" | "rust" | "hatch" | "rail";
+export type DotTone = Extract<PipeTone, "brand" | "accent" | "rust">;
+
+export type PipeSegment = {
+  span: number;
+  tone: PipeTone;
+};
+
+export type PipeMarker = {
+  at: number;
+  label: string;
+  value?: string;
+  tone?: DotTone;
+};
+
+type PipelineProps = {
+  segments: PipeSegment[];
+  markers?: PipeMarker[];
+  scale?: string[];
+  thickness?: "thin" | "base" | "thick";
+  motionKey: string;
+  className?: string;
+};
+
+function MarkerValue({ value }: { value: string }) {
+  const parts = splitNumeric(value);
+  if (!parts) return <>{value}</>;
+
+  return (
+    <>
+      {parts.prefix}
+      <CountUp
+        value={parts.value}
+        precision={Number.isInteger(parts.value) ? 0 : 1}
+      />
+      {parts.suffix}
+    </>
+  );
+}
+
+export default function Pipeline({
+  segments,
+  markers = [],
+  scale,
+  thickness = "base",
+  motionKey,
+  className,
+}: PipelineProps) {
+  const { ref, shown, instant, pending } = useReveal(motionKey, 0.25);
+
+  return (
+    <div ref={ref} className={clsx("pipe", className)}>
+      {markers.length > 0 ? (
+        <div className="pipe__markers">
+          {markers.map((marker, index) => (
+            <div
+              key={`${marker.at}-${marker.label}`}
+              className={clsx(
+                "pipe__marker reveal",
+                shown && "is-revealed",
+                instant && "is-instant",
+              )}
+              style={{
+                left: `${marker.at}%`,
+                transitionDelay: instant ? undefined : `${300 + index * 110}ms`,
+              }}
+            >
+              <span className="pipe__marker-label">{marker.label}</span>
+              {marker.value ? (
+                <span className="pipe__marker-value">
+                  <MarkerValue value={marker.value} />
+                </span>
+              ) : null}
+              <span
+                className={clsx("pipe__dot", `dot--${marker.tone ?? "brand"}`)}
+              />
+              <span className="pipe__stem" />
+            </div>
+          ))}
+        </div>
+      ) : null}
+
+      <div className={clsx("pipe__track", `pipe__track--${thickness}`)}>
+        {segments.map((segment, index) => (
+          <span
+            key={`${segment.tone}-${index}`}
+            className={clsx(
+              "pipe__seg",
+              `pipe__seg--${segment.tone}`,
+              !instant && "pipe__seg--animated",
+            )}
+            style={{
+              width: pending ? "0%" : `${segment.span}%`,
+              transitionDelay: instant ? undefined : `${index * 90}ms`,
+            }}
+          />
+        ))}
+      </div>
+
+      {scale ? (
+        <div className="pipe__scale">
+          {scale.map((tick) => (
+            <span key={tick} className="pipe__tick">
+              {tick}
+            </span>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
