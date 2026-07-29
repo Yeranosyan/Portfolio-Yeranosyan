@@ -7,6 +7,7 @@ type RevealProps = {
   children: React.ReactNode;
   motionKey: string;
   delay?: number;
+  style?: React.CSSProperties;
   className?: string;
 };
 
@@ -14,6 +15,7 @@ export default function Reveal({
   children,
   motionKey,
   delay = 0,
+  style,
   className,
 }: RevealProps) {
   const { ref, shown, instant } = useReveal(motionKey);
@@ -21,7 +23,9 @@ export default function Reveal({
   return (
     <div
       ref={ref}
-      style={delay && !instant ? { transitionDelay: `${delay}ms` } : undefined}
+      style={
+        delay && !instant ? { ...style, transitionDelay: `${delay}ms` } : style
+      }
       className={clsx(
         "reveal",
         shown && "is-revealed",

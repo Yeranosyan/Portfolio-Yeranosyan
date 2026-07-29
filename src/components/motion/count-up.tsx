@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useInView } from "@/hooks/use-in-view";
+import { useReveal } from "@/hooks/use-reveal";
 
 type CountUpProps = {
   value: number;
+  motionKey: string;
   durationMs?: number;
-  /** Decimal places to render. */
   precision?: number;
 };
 
@@ -14,19 +14,19 @@ const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
 
 export default function CountUp({
   value,
-  durationMs = 1400,
+  motionKey,
+  durationMs = 800,
   precision = 0,
 }: CountUpProps) {
-  const { ref, inView, active } = useInView<HTMLSpanElement>(0.35);
+  const { ref, shown, instant } = useReveal<HTMLSpanElement>(motionKey, 0.35);
   const [display, setDisplay] = useState(value);
 
   useEffect(() => {
-    if (!active) return;
-
     let frame = 0;
 
-    if (!inView) {
-      frame = requestAnimationFrame(() => setDisplay(0));
+    if (instant || !shown) {
+      const target = instant ? value : 0;
+      frame = requestAnimationFrame(() => setDisplay(target));
       return () => cancelAnimationFrame(frame);
     }
 
@@ -40,7 +40,7 @@ export default function CountUp({
 
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [active, inView, value, durationMs]);
+  }, [shown, instant, value, durationMs]);
 
   return (
     <span ref={ref} className="tabular-nums">

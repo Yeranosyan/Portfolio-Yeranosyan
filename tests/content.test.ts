@@ -7,6 +7,7 @@ import {
   practice,
   projectsData,
   skillGroups,
+  teamCapabilities,
 } from "@/lib/data";
 import { navLinks, site, socialLinks } from "@/lib/site";
 import { splitByTerms } from "@/lib/utils/text";
@@ -35,11 +36,12 @@ const unique = <T>(values: readonly T[]) =>
 describe("data sets are populated", () => {
   it.each([
     ["capabilities", capabilities.length, 3],
+    ["team capabilities", teamCapabilities.length, 3],
     ["experiences", experiencesData.length, 5],
     ["education", educationsData.length, 8],
     ["impact metrics", impactMetrics.length, 4],
     ["projects", projectsData.length, 7],
-    ["skill groups", skillGroups.length, 6],
+    ["skill groups", skillGroups.length, 7],
     ["nav links", navLinks.length, 5],
     ["social links", socialLinks.length, 6],
   ])("%s is non-empty and the expected size", (_label, actual, expected) => {
@@ -145,6 +147,18 @@ describe("impact metrics", () => {
 describe("capabilities and practice", () => {
   it("numbers the capabilities sequentially", () => {
     expect(capabilities.map((c) => c.index)).toEqual(["01", "02", "03"]);
+  });
+
+  it("continues the numbering into the team capabilities", () => {
+    expect(teamCapabilities.map((c) => c.index)).toEqual(["04", "05", "06"]);
+  });
+
+  it("backs every team capability with signals instead of a metric", () => {
+    for (const capability of teamCapabilities) {
+      expect(capability.signals.length).toBeGreaterThan(0);
+      expect(unique(capability.signals)).toBe(true);
+      expect(capability.body.length).toBeGreaterThan(40);
+    }
   });
 
   it("states how the work is done with other disciplines", () => {

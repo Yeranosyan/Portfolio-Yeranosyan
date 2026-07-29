@@ -29,7 +29,13 @@ type PipelineProps = {
   className?: string;
 };
 
-function MarkerValue({ value }: { value: string }) {
+function MarkerValue({
+  value,
+  motionKey,
+}: {
+  value: string;
+  motionKey: string;
+}) {
   const parts = splitNumeric(value);
   if (!parts) return <>{value}</>;
 
@@ -38,6 +44,7 @@ function MarkerValue({ value }: { value: string }) {
       {parts.prefix}
       <CountUp
         value={parts.value}
+        motionKey={motionKey}
         precision={Number.isInteger(parts.value) ? 0 : 1}
       />
       {parts.suffix}
@@ -53,7 +60,7 @@ export default function Pipeline({
   motionKey,
   className,
 }: PipelineProps) {
-  const { ref, shown, instant, pending } = useReveal(motionKey, 0.25);
+  const { ref, shown, instant } = useReveal(motionKey, 0.25);
 
   return (
     <div ref={ref} className={clsx("pipe", className)}>
@@ -72,12 +79,15 @@ export default function Pipeline({
                 transitionDelay: instant ? undefined : `${300 + index * 110}ms`,
               }}
             >
-              <span className="pipe__marker-label">{marker.label}</span>
               {marker.value ? (
                 <span className="pipe__marker-value">
-                  <MarkerValue value={marker.value} />
+                  <MarkerValue
+                    value={marker.value}
+                    motionKey={`${motionKey}-marker-${marker.label}`}
+                  />
                 </span>
               ) : null}
+              <span className="pipe__marker-label">{marker.label}</span>
               <span
                 className={clsx("pipe__dot", `dot--${marker.tone ?? "brand"}`)}
               />
@@ -87,19 +97,18 @@ export default function Pipeline({
         </div>
       ) : null}
 
-      <div className={clsx("pipe__track", `pipe__track--${thickness}`)}>
+      <div
+        className={clsx(
+          "pipe__track",
+          `pipe__track--${thickness}`,
+          shown && "is-grown",
+        )}
+      >
         {segments.map((segment, index) => (
           <span
             key={`${segment.tone}-${index}`}
-            className={clsx(
-              "pipe__seg",
-              `pipe__seg--${segment.tone}`,
-              !instant && "pipe__seg--animated",
-            )}
-            style={{
-              width: pending ? "0%" : `${segment.span}%`,
-              transitionDelay: instant ? undefined : `${index * 90}ms`,
-            }}
+            className={clsx("pipe__seg", `pipe__seg--${segment.tone}`)}
+            style={{ width: `${segment.span}%` }}
           />
         ))}
       </div>

@@ -66,7 +66,7 @@ If your system asks for reduced motion, none of it runs at all.
 
 |                |                                                                      |
 | :------------- | :------------------------------------------------------------------- |
-| **Home**       | Who I am, and the three problems I get hired to fix                  |
+| **Home**       | Who I am, and the six problems I get hired to fix                    |
 | **Experience** | Five roles, with what each one actually changed                      |
 | **Skills**     | The stack, grouped by where it sits in a system                      |
 | **Education**  | BCIT technical writing, plus Microsoft, IBM, Meta, and Johns Hopkins |
@@ -79,7 +79,7 @@ Nothing here is decorative-only. The colors are named by role rather than by hue
 so the two themes stay in step from a single definition. The components are small
 and reusable. The styling lives in one stylesheet, which keeps the markup readable.
 
-And it's covered by **118 tests** — not screenshot tests, but tests for the things
+And it's covered by **145 tests** — not screenshot tests, but tests for the things
 that would quietly break: that the charts add up, that the dates stay in order,
 that no number on the site ever claims more than my résumé supports.
 
