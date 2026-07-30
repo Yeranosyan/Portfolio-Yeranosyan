@@ -145,9 +145,19 @@
   }
   .pipe__marker {
     @apply absolute bottom-0 flex -translate-x-1/2 flex-col items-center;
+    max-width: min(9rem, var(--marker-room, 100%));
+  }
+  .pipe__marker-text {
+    @apply flex flex-col items-center text-center;
+  }
+  .pipe__marker--start .pipe__marker-text {
+    @apply translate-x-1/2 items-start text-left;
+  }
+  .pipe__marker--end .pipe__marker-text {
+    @apply -translate-x-1/2 items-end text-right;
   }
   .pipe__marker-label {
-    @apply mt-1.5 max-w-36 text-center text-xs leading-tight text-balance text-ink-muted;
+    @apply mt-1.5 text-xs leading-tight text-balance text-ink-muted;
   }
   .pipe__marker-value {
     @apply text-2xl leading-none font-light tabular-nums;
@@ -618,12 +628,17 @@
 
   .creds {
     --stack-top: 8rem;
-    --stack-step: 0.75rem;
+    --folder-tab-h: 12px;
+    --stack-step: var(--folder-tab-h);
+  }
+  @media (min-width: 40rem) {
+    .creds {
+      --folder-tab-h: 20px;
+    }
   }
   @media (min-width: 64rem) {
     .creds {
       --stack-top: 6.75rem;
-      --stack-step: 1.25rem;
     }
   }
   .creds > *:not(.creds__tail) {
@@ -642,13 +657,11 @@
   .folder {
     @apply relative;
     --folder-radius: 1.5rem;
-    --folder-tab-h: 16px;
     --folder-tab-w: 13rem;
     --folder-tab-x: 2rem;
   }
   @media (min-width: 40rem) {
     .folder {
-      --folder-tab-h: 20px;
       --folder-tab-w: 16.5rem;
       --folder-tab-x: 4rem;
     }
@@ -657,7 +670,7 @@
   .folder__tab {
     @apply absolute block;
     background-color: var(--canvas);
-    background-image: linear-gradient(var(--panel-tint), var(--panel-tint));
+    background-image: var(--folder-tab-fill);
     top: calc(var(--folder-tab-h) * -1);
     left: var(--folder-tab-x);
     width: var(--folder-tab-w);
@@ -674,7 +687,7 @@
     right: var(--folder-tab-x);
   }
   .folder__grip {
-    @apply absolute top-[64%] left-1/2 h-[3px] w-11 -translate-x-1/2 rounded-full bg-hairline-strong;
+    @apply absolute top-[64%] left-1/2 h-[3px] w-11 -translate-x-1/2 rounded-full bg-hairline;
   }
 
   .folder__sheet {

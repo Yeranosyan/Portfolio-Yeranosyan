@@ -29,6 +29,22 @@ type PipelineProps = {
   className?: string;
 };
 
+type MarkerAlign = "start" | "center" | "end";
+
+const EDGE_ZONE = 15;
+
+function markerAlign(at: number): MarkerAlign {
+  if (at <= EDGE_ZONE) return "start";
+  if (at >= 100 - EDGE_ZONE) return "end";
+  return "center";
+}
+
+function markerRoom(at: number, align: MarkerAlign) {
+  if (align === "start") return 100 - at;
+  if (align === "end") return at;
+  return Math.min(at, 100 - at) * 2;
+}
+
 function MarkerValue({
   value,
   motionKey,
@@ -66,34 +82,49 @@ export default function Pipeline({
     <div ref={ref} className={clsx("pipe", className)}>
       {markers.length > 0 ? (
         <div className="pipe__markers">
-          {markers.map((marker, index) => (
-            <div
-              key={`${marker.at}-${marker.label}`}
-              className={clsx(
-                "pipe__marker reveal",
-                shown && "is-revealed",
-                instant && "is-instant",
-              )}
-              style={{
-                left: `${marker.at}%`,
-                transitionDelay: instant ? undefined : `${300 + index * 110}ms`,
-              }}
-            >
-              {marker.value ? (
-                <span className="pipe__marker-value">
-                  <MarkerValue
-                    value={marker.value}
-                    motionKey={`${motionKey}-marker-${marker.label}`}
-                  />
+          {markers.map((marker, index) => {
+            const align = markerAlign(marker.at);
+
+            return (
+              <div
+                key={`${marker.at}-${marker.label}`}
+                className={clsx(
+                  "pipe__marker reveal",
+                  `pipe__marker--${align}`,
+                  shown && "is-revealed",
+                  instant && "is-instant",
+                )}
+                style={
+                  {
+                    left: `${marker.at}%`,
+                    "--marker-room": `${markerRoom(marker.at, align)}%`,
+                    transitionDelay: instant
+                      ? undefined
+                      : `${300 + index * 110}ms`,
+                  } as React.CSSProperties
+                }
+              >
+                <span className="pipe__marker-text">
+                  {marker.value ? (
+                    <span className="pipe__marker-value">
+                      <MarkerValue
+                        value={marker.value}
+                        motionKey={`${motionKey}-marker-${marker.label}`}
+                      />
+                    </span>
+                  ) : null}
+                  <span className="pipe__marker-label">{marker.label}</span>
                 </span>
-              ) : null}
-              <span className="pipe__marker-label">{marker.label}</span>
-              <span
-                className={clsx("pipe__dot", `dot--${marker.tone ?? "brand"}`)}
-              />
-              <span className="pipe__stem" />
-            </div>
-          ))}
+                <span
+                  className={clsx(
+                    "pipe__dot",
+                    `dot--${marker.tone ?? "brand"}`,
+                  )}
+                />
+                <span className="pipe__stem" />
+              </div>
+            );
+          })}
         </div>
       ) : null}
 
