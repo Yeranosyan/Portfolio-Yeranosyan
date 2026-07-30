@@ -94,11 +94,7 @@ export default function EducationPage() {
             const position = axisPosition(item.year, AXIS_START, AXIS_END);
 
             return (
-              <Reveal
-                key={item.title}
-                motionKey={`cred-${item.title}`}
-                style={{ "--stack-index": index } as React.CSSProperties}
-              >
+              <Reveal key={item.title} motionKey={`cred-${item.title}`}>
                 <article
                   className={clsx(
                     "folder",
