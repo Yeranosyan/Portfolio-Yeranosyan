@@ -160,7 +160,7 @@
     @apply mt-1.5 text-xs leading-tight text-balance text-ink-muted;
   }
   .pipe__marker-value {
-    @apply text-2xl leading-none font-light tabular-nums;
+    @apply text-xl leading-none font-light tabular-nums sm:text-2xl;
   }
   .pipe__dot {
     @apply mt-2 h-2 w-2 rounded-full;
@@ -628,13 +628,6 @@
 
   .creds {
     --stack-top: 8rem;
-    --folder-tab-h: 12px;
-    --stack-step: var(--folder-tab-h);
-  }
-  @media (min-width: 40rem) {
-    .creds {
-      --folder-tab-h: 20px;
-    }
   }
   @media (min-width: 64rem) {
     .creds {
@@ -647,7 +640,7 @@
   @supports (position: sticky) {
     .creds > *:not(.creds__tail) {
       position: sticky;
-      top: calc(var(--stack-top) + var(--stack-index) * var(--stack-step));
+      top: var(--stack-top);
     }
   }
 
@@ -657,11 +650,13 @@
   .folder {
     @apply relative;
     --folder-radius: 1.5rem;
+    --folder-tab-h: 14px;
     --folder-tab-w: 13rem;
     --folder-tab-x: 2rem;
   }
   @media (min-width: 40rem) {
     .folder {
+      --folder-tab-h: 20px;
       --folder-tab-w: 16.5rem;
       --folder-tab-x: 4rem;
     }
@@ -681,10 +676,6 @@
     mask-size: 100% 100%;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-  }
-  .folder--mirror .folder__tab {
-    left: auto;
-    right: var(--folder-tab-x);
   }
   .folder__grip {
     @apply absolute top-[64%] left-1/2 h-[3px] w-11 -translate-x-1/2 rounded-full bg-hairline;
